@@ -1,0 +1,2863 @@
+<!DOCTYPE html><html><head><title>Rootward</title><meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui=1"><meta charset="UTF-8"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="description" content=""><link rel="manifest" href="manifest.json"><link rel="icon" type="image/png" href="icon64.png"><link rel="apple-touch-icon" sizes="180x180" href="icon180.png"><link rel="icon" type="image/png" sizes="32x32" href="icon32.png"><link rel="icon" type="image/png" sizes="16x16" href="icon16.png"><style>html,body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  overflow:hidden;
+  font-family: Verdana;
+}
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#canvaswrapper {
+  text-align: center ;
+}
+</style><style>@font-face { font-family: "BitCell" ; src: url("fonts/BitCell.ttf") format("truetype"); }</style><script>window.fonts = ["BitCell"]</script></head><body class="noselect custom-cursor" oncontextmenu="return false;"><div id="canvaswrapper"></div><script type="text/javascript">var resources = {"images":[{"file":"black.png","version":2,"size":119,"properties":{"frames":1,"fps":5}},{"file":"enemy-backold.png","version":60,"size":923,"properties":{"frames":4,"fps":1}},{"file":"enemy-dogback.png","version":12,"size":1013,"properties":{"frames":4,"fps":1}},{"file":"enemy-dogbackwalking.png","version":53,"size":645,"properties":{"frames":2,"fps":1}},{"file":"enemy-dogfront.png","version":13,"size":1057,"properties":{"frames":4,"fps":1}},{"file":"enemy-dogfrontwalk.png","version":74,"size":657,"properties":{"frames":2,"fps":1}},{"file":"enemy-dogleft.png","version":140,"size":864,"properties":{"frames":4,"fps":1}},{"file":"enemy-dogleftwalking.png","version":70,"size":607,"properties":{"frames":2,"fps":1}},{"file":"enemy-dogright.png","version":146,"size":1017,"properties":{"frames":4,"fps":1}},{"file":"enemy-dogrightwalking.png","version":6,"size":616,"properties":{"frames":2,"fps":1}},{"file":"enemy-frontold.png","version":48,"size":890,"properties":{"frames":4,"fps":1}},{"file":"enemy-gnome-idle-back.png","version":26,"size":653,"properties":{"frames":4,"fps":1}},{"file":"enemy-gnome-idle-front.png","version":40,"size":777,"properties":{"frames":6,"fps":1}},{"file":"enemy-gnome-idle-left.png","version":69,"size":751,"properties":{"frames":6,"fps":1}},{"file":"enemy-gnome-idle-right.png","version":63,"size":830,"properties":{"frames":6,"fps":1}},{"file":"enemy-gnome-walking-back.png","version":25,"size":717,"properties":{"frames":4,"fps":1}},{"file":"enemy-gnome-walking-front.png","version":83,"size":453,"properties":{"frames":6,"fps":2}},{"file":"enemy-gnome-walking-left.png","version":55,"size":726,"properties":{"frames":4,"fps":1}},{"file":"enemy-gnome-walking-right.png","version":7,"size":774,"properties":{"frames":4,"fps":1}},{"file":"enemy-gnome.png","version":54,"size":396,"properties":{"frames":1,"fps":9}},{"file":"enemy-sprite3.png","version":1,"size":117,"properties":{"frames":1,"fps":5}},{"file":"icon.png","version":78,"size":612,"properties":{"frames":1,"fps":5}},{"file":"import-sprite.png","version":96,"size":481,"properties":{"frames":1,"fps":5}},{"file":"import-sprite2.png","version":24,"size":689,"properties":{"frames":1,"fps":5}},{"file":"import-sprite3.png","version":5,"size":858,"properties":{"frames":1,"fps":5}},{"file":"import-sprite4.png","version":62,"size":512,"properties":{"frames":1,"fps":5}},{"file":"import-sprite5.png","version":68,"size":770,"properties":{"frames":1,"fps":5}},{"file":"import-sprite6.png","version":17,"size":677,"properties":{"frames":1,"fps":5}},{"file":"import-wjuppahb0zse.png","version":5,"size":35531,"properties":{"frames":1,"fps":5}},{"file":"mauernrand-sprite.png","version":3,"size":221,"properties":{"frames":1,"fps":5}},{"file":"mauernrand-sprite10.png","version":3,"size":397,"properties":{"frames":1,"fps":5}},{"file":"mauernrand-sprite11.png","version":3,"size":388,"properties":{"frames":1,"fps":5}},{"file":"mauernrand-sprite12.png","version":4,"size":404,"properties":{"frames":1,"fps":5}},{"file":"mauernrand-sprite13.png","version":6,"size":445,"properties":{"frames":1,"fps":5}},{"file":"mauernrand-sprite14.png","version":1,"size":126,"properties":{"frames":1,"fps":5}},{"file":"mauernrand-sprite15.png","version":5,"size":339,"properties":{"frames":1,"fps":5}},{"file":"mauernrand-sprite16.png","version":10,"size":172,"properties":{"frames":1,"fps":5}},{"file":"mauernrand-sprite17.png","version":14,"size":145,"properties":{"frames":1,"fps":5}},{"file":"mauernrand-sprite18.png","version":13,"size":154,"properties":{"frames":1,"fps":5}},{"file":"mauernrand-sprite19.png","version":9,"size":172,"properties":{"frames":1,"fps":5}},{"file":"mauernrand-sprite2.png","version":2,"size":246,"properties":{"frames":1,"fps":5}},{"file":"mauernrand-sprite3.png","version":2,"size":233,"properties":{"frames":1,"fps":5}},{"file":"mauernrand-sprite4.png","version":2,"size":232,"properties":{"frames":1,"fps":5}},{"file":"mauernrand-sprite5.png","version":2,"size":313,"properties":{"frames":1,"fps":5}},{"file":"mauernrand-sprite6.png","version":4,"size":320,"properties":{"frames":1,"fps":5}},{"file":"mauernrand-sprite7.png","version":2,"size":330,"properties":{"frames":1,"fps":5}},{"file":"mauernrand-sprite8.png","version":2,"size":314,"properties":{"frames":1,"fps":5}},{"file":"mauernrand-sprite9.png","version":4,"size":402,"properties":{"frames":1,"fps":5}},{"file":"player-idle-back.png","version":43,"size":769,"properties":{"frames":2,"fps":1}},{"file":"player-idle-front.png","version":533,"size":1150,"properties":{"frames":8,"fps":1}},{"file":"player-idle-left.png","version":162,"size":1150,"properties":{"frames":8,"fps":1}},{"file":"player-idle-right.png","version":344,"size":1151,"properties":{"frames":8,"fps":1}},{"file":"player-schwung.png","version":154,"size":2863,"properties":{"frames":35,"fps":60}},{"file":"player-schwung_hitbox.png","version":20,"size":215,"properties":{"frames":1,"fps":5}},{"file":"player-walking-back.png","version":69,"size":717,"properties":{"frames":2,"fps":1}},{"file":"player-walking-front.png","version":47,"size":882,"properties":{"frames":4,"fps":3}},{"file":"player-walking-left.png","version":36,"size":857,"properties":{"frames":2,"fps":3}},{"file":"player-walking-right.png","version":113,"size":825,"properties":{"frames":2,"fps":2}},{"file":"posion.png","version":117,"size":291,"properties":{"frames":1,"fps":5}},{"file":"sprite.png","version":93,"size":605,"properties":{"frames":1,"fps":5}},{"file":"sprite10.png","version":36,"size":221,"properties":{"frames":1,"fps":5}},{"file":"sprite11.png","version":3,"size":313,"properties":{"frames":1,"fps":5}},{"file":"sprite12.png","version":3,"size":320,"properties":{"frames":1,"fps":5}},{"file":"sprite13.png","version":3,"size":314,"properties":{"frames":1,"fps":5}},{"file":"sprite14.png","version":4,"size":233,"properties":{"frames":1,"fps":5}},{"file":"sprite15.png","version":3,"size":246,"properties":{"frames":1,"fps":5}},{"file":"sprite16.png","version":3,"size":232,"properties":{"frames":1,"fps":5}},{"file":"sprite17.png","version":11,"size":116,"properties":{"frames":1,"fps":5}},{"file":"sprite18.png","version":4,"size":116,"properties":{"frames":1,"fps":5}},{"file":"sprite19.png","version":1,"size":112,"properties":{"frames":1,"fps":5}},{"file":"sprite2.png","version":31,"size":198,"properties":{"frames":1,"fps":5}},{"file":"sprite20.png","version":21,"size":217,"properties":{"frames":1,"fps":1}},{"file":"sprite21.png","version":3,"size":128,"properties":{"frames":1,"fps":5}},{"file":"sprite3.png","version":16,"size":212,"properties":{"frames":1,"fps":5}},{"file":"sprite4.png","version":9,"size":118,"properties":{"frames":1,"fps":5}},{"file":"sprite5.png","version":5,"size":329,"properties":{"frames":1,"fps":5}},{"file":"sprite6.png","version":45,"size":482,"properties":{"frames":1,"fps":5}},{"file":"sprite7.png","version":77,"size":435,"properties":{"frames":1,"fps":5}},{"file":"sprite8.png","version":24,"size":126,"properties":{"frames":1,"fps":5}},{"file":"sprite9.png","version":8,"size":330,"properties":{"frames":1,"fps":5}},{"file":"stone.png","version":5,"size":772,"properties":{"frames":1,"fps":5}},{"file":"ui-logoandicon-icon.png","version":312,"size":612,"properties":{"frames":1,"fps":5}}],"assets":[],"maps":{"rooms/base":"{\"width\":16,\"height\":10,\"block_width\":16,\"block_height\":16,\"sprites\":[0,\"black\"],\"data\":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]}","rooms/edge":"{\"width\":16,\"height\":10,\"block_width\":16,\"block_height\":16,\"sprites\":[0,\"stone\"],\"data\":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]}","rooms/r1/floor":"{\"width\":16,\"height\":10,\"block_width\":16,\"block_height\":16,\"sprites\":[0,\"sprite2\"],\"data\":[0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0]}","rooms/r1/hitbox":"{\"width\":16,\"height\":10,\"block_width\":16,\"block_height\":16,\"sprites\":[0,\"sprite17\"],\"data\":[1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1]}","rooms/r1/part1":"{\"width\":16,\"height\":10,\"block_width\":16,\"block_height\":16,\"sprites\":[0,\"sprite6\"],\"data\":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}","rooms/r1/part2":"{\"width\":16,\"height\":10,\"block_width\":16,\"block_height\":16,\"sprites\":[0,\"mauernrand-sprite7\",\"mauernrand-sprite\",\"mauernrand-sprite8\",\"mauernrand-sprite2\",\"black\",\"sprite6\",\"mauernrand-sprite4\",\"sprite16\",\"sprite10\",\"sprite15\",\"sprite13\",\"sprite9\",\"mauernrand-sprite5\",\"mauernrand-sprite3\",\"mauernrand-sprite15\",\"mauernrand-sprite12\",\"mauernrand-sprite10\",\"mauernrand-sprite6\"],\"data\":[1,2,2,2,2,2,3,0,0,1,2,2,2,2,2,3,4,0,5,6,6,6,6,0,0,6,6,6,6,5,0,7,4,0,8,9,9,9,9,0,0,9,9,9,9,10,0,7,6,6,6,0,0,0,0,0,0,0,0,0,0,6,6,6,9,9,9,0,0,0,0,0,0,0,0,0,0,9,9,9,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,9,11,0,0,0,0,0,0,0,0,0,0,12,9,3,4,0,8,0,0,0,0,0,0,0,0,0,0,10,0,7,13,14,14,15,15,15,16,0,0,17,15,15,15,14,14,18]}","rooms/r1/part3":"{\"width\":16,\"height\":10,\"block_width\":16,\"block_height\":16,\"sprites\":[0,\"mauernrand-sprite4\",\"mauernrand-sprite2\",\"sprite15\",\"sprite16\"],\"data\":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,0,4,0,0,0,0,0,0,0,0,0,0,3,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}","rooms/r2/floor":"{\"width\":16,\"height\":10,\"block_width\":16,\"block_height\":16,\"sprites\":[0,\"sprite2\",\"sprite9\",\"sprite13\",\"sprite11\",\"sprite12\"],\"data\":[0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,2,3,1,1,1,1,1,1,1,1,1,1,1,1,1,1,4,5,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0]}","rooms/r2/hitbox":"{\"width\":16,\"height\":10,\"block_width\":16,\"block_height\":16,\"sprites\":[0,\"sprite17\",\"sprite18\"],\"data\":[1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,1,1,0,0,0,0,0,2,2,0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1]}","rooms/r2/part1":"{\"width\":16,\"height\":10,\"block_width\":16,\"block_height\":16,\"sprites\":[0,\"sprite6\"],\"data\":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,1,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,1,1,1,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}","rooms/r2/part2":"{\"width\":16,\"height\":10,\"block_width\":16,\"block_height\":16,\"sprites\":[0,\"mauernrand-sprite7\",\"mauernrand-sprite\",\"mauernrand-sprite8\",\"mauernrand-sprite2\",\"black\",\"sprite6\",\"mauernrand-sprite4\",\"sprite9\",\"sprite10\",\"sprite13\",\"mauernrand-sprite5\",\"mauernrand-sprite3\",\"mauernrand-sprite15\",\"mauernrand-sprite12\",\"mauernrand-sprite10\",\"mauernrand-sprite6\"],\"data\":[1,2,2,2,2,2,3,0,0,1,2,2,2,2,2,3,4,0,0,5,6,6,6,0,0,6,6,6,5,0,0,7,4,0,6,6,8,9,9,0,0,9,9,10,6,6,0,7,6,6,1,9,0,0,0,0,0,0,0,0,9,10,6,6,9,9,0,0,0,0,0,0,0,0,0,0,0,0,9,9,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,10,0,0,0,0,0,0,0,0,0,0,0,0,8,3,4,0,9,10,0,0,0,0,0,0,0,0,8,9,0,7,11,12,12,12,13,13,14,0,0,15,13,13,12,12,12,16]}","rooms/r2/part3":"{\"width\":16,\"height\":10,\"block_width\":16,\"block_height\":16,\"sprites\":[0,\"mauernrand-sprite4\",\"mauernrand-sprite2\",\"sprite15\",\"sprite16\"],\"data\":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}","rooms/r3/floor":"{\"width\":16,\"height\":10,\"block_width\":16,\"block_height\":16,\"sprites\":[0,\"sprite2\"],\"data\":[0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0]}","rooms/r3/hitbox":"{\"width\":16,\"height\":10,\"block_width\":16,\"block_height\":16,\"sprites\":[0,\"sprite17\"],\"data\":[1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1]}","rooms/r3/part1":"{\"width\":16,\"height\":10,\"block_width\":16,\"block_height\":16,\"sprites\":[0,\"sprite6\"],\"data\":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,0,0,0,0,0,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}","rooms/r3/part2":"{\"width\":16,\"height\":10,\"block_width\":16,\"block_height\":16,\"sprites\":[0,\"sprite9\",\"sprite10\",\"mauernrand-sprite8\",\"mauernrand-sprite7\",\"sprite13\",\"sprite15\",\"black\",\"sprite6\",\"sprite16\",\"mauernrand-sprite4\",\"mauernrand-sprite2\",\"sprite11\",\"sprite14\",\"mauernrand-sprite15\",\"mauernrand-sprite12\",\"mauernrand-sprite10\",\"sprite12\"],\"data\":[1,2,2,2,2,2,3,0,0,4,2,2,2,2,2,5,6,0,0,0,7,8,8,0,0,8,8,7,0,0,0,9,6,0,0,0,9,2,2,0,0,2,2,6,0,0,0,9,8,8,8,8,8,0,0,0,0,0,0,8,8,8,8,8,2,2,2,2,2,0,0,0,0,0,0,2,2,2,2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,2,2,3,0,0,0,0,0,0,4,2,2,2,5,6,0,0,0,10,0,0,0,0,0,0,11,0,0,0,9,12,13,13,13,13,14,15,0,0,16,14,13,13,13,13,17]}","rooms/r3/part3":"{\"width\":16,\"height\":10,\"block_width\":16,\"block_height\":16,\"sprites\":[0,\"mauernrand-sprite4\",\"mauernrand-sprite2\"],\"data\":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,1,0,0,0,0,0,0,2,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}","rooms/r4/floor":"{\"width\":16,\"height\":10,\"block_width\":16,\"block_height\":16,\"sprites\":[0,\"sprite2\"],\"data\":[0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0]}","rooms/r4/hitbox":"{\"width\":16,\"height\":10,\"block_width\":16,\"block_height\":16,\"sprites\":[0,\"sprite17\"],\"data\":[1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1]}","rooms/r4/part1":"{\"width\":16,\"height\":10,\"block_width\":16,\"block_height\":16,\"sprites\":[0,\"sprite6\"],\"data\":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}","rooms/r4/part2":"{\"width\":16,\"height\":10,\"block_width\":16,\"block_height\":16,\"sprites\":[0,\"mauernrand-sprite7\",\"mauernrand-sprite\",\"mauernrand-sprite8\",\"mauernrand-sprite2\",\"mauernrand-sprite4\",\"sprite6\",\"mauernrand-sprite5\",\"mauernrand-sprite3\",\"mauernrand-sprite6\"],\"data\":[1,2,2,2,2,2,3,0,0,1,2,2,2,2,2,3,4,0,0,0,0,0,5,0,0,4,0,0,0,0,0,5,4,0,0,0,0,0,5,0,0,4,0,0,0,0,0,5,6,6,6,6,6,6,6,0,0,6,6,6,6,6,6,6,2,2,2,2,2,2,2,0,0,2,2,2,2,2,2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,2,2,2,2,3,0,0,1,2,2,2,2,2,3,4,0,0,0,0,0,5,0,0,4,0,0,0,0,0,5,7,8,8,8,8,8,9,0,0,7,8,8,8,8,8,9]}","rooms/r4/part3":"{\"width\":16,\"height\":10,\"block_width\":16,\"block_height\":16,\"sprites\":[0,\"mauernrand-sprite2\",\"mauernrand-sprite4\"],\"data\":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,2,0,0,1,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}","test1":"{\"width\":24,\"height\":16,\"block_width\":16,\"block_height\":16,\"sprites\":[0,\"import-wjuppahb0zse:1,10\",\"import-wjuppahb0zse:1,12\",\"import-sprite2\",\"stone\",\"import-wjuppahb0zse:8,5\",\"import-sprite5\",\"import-wjuppahb0zse:7,4\",\"sprite6\",\"sprite7\",\"sprite2\",\"sprite3\",\"import-wjuppahb0zse:11,5\",\"import-wjuppahb0zse:12,5\",\"import-wjuppahb0zse:7,8\",\"sprite8\",\"import-wjuppahb0zse:11,4\",\"import-wjuppahb0zse:12,4\",\"import-wjuppahb0zse:16,1\",\"posion\",\"import-wjuppahb0zse:8,1\",\"import-wjuppahb0zse:0,18\",\"import-wjuppahb0zse:1,18\",\"import-wjuppahb0zse:2,18\",\"import-wjuppahb0zse:3,18\",\"import-wjuppahb0zse:0,17\",\"import-wjuppahb0zse:1,17\",\"import-wjuppahb0zse:2,16\",\"import-wjuppahb0zse:3,17\",\"sprite\",\"import-wjuppahb0zse:0,15\",\"import-wjuppahb0zse:1,15\",\"import-wjuppahb0zse:2,15\",\"import-wjuppahb0zse:3,15\",\"import-sprite3\",\"import-sprite\",\"import-sprite6\",\"import-wjuppahb0zse:9,2\"],\"data\":[1,1,1,2,2,2,3,3,2,2,2,2,2,2,4,4,5,5,4,6,6,6,6,6,2,2,2,3,3,3,3,3,3,3,3,3,3,3,5,4,4,4,7,7,7,7,4,4,3,3,3,3,3,3,3,3,3,8,8,8,8,3,5,4,7,7,5,5,5,7,4,4,9,9,3,4,3,4,4,10,10,10,10,10,8,8,4,4,4,4,5,4,5,5,5,11,4,4,4,4,4,4,4,10,10,10,10,10,8,8,10,4,12,13,4,4,14,5,11,11,4,4,4,4,4,8,8,8,8,8,15,15,8,8,10,10,16,17,4,4,3,3,11,4,9,9,9,9,9,9,8,8,8,8,15,15,8,8,11,10,10,10,10,10,4,14,11,11,9,4,4,9,9,9,9,9,8,8,15,15,8,8,11,9,9,10,10,14,4,4,18,11,9,9,4,4,4,9,9,9,4,8,10,11,8,11,19,9,9,9,14,14,4,4,18,18,9,9,4,4,4,2,2,2,2,8,10,10,11,11,19,9,9,9,10,10,4,20,20,18,4,9,4,4,4,3,3,3,3,4,4,21,22,23,24,9,9,9,10,10,4,20,18,11,4,4,4,4,4,4,4,4,4,4,4,25,26,27,28,9,29,9,10,11,4,20,20,11,4,4,4,4,4,4,4,4,4,4,4,30,31,32,33,10,10,10,10,11,11,11,10,11,4,34,34,4,35,35,4,36,36,4,4,4,10,10,10,10,4,10,10,10,10,11,11,11,4,34,34,4,35,35,4,36,36,4,4,4,4,10,10,10,10,10,10,4,4,11,11,18,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,37,37,37,11,4]}","test2":"{\"width\":16,\"height\":8,\"block_width\":16,\"block_height\":16,\"sprites\":[0,\"sprite6\",\"sprite10\",\"sprite13\",\"sprite16\",\"mauernrand-sprite17\",\"mauernrand-sprite8\",\"mauernrand-sprite9\",\"mauernrand-sprite3\",\"mauernrand-sprite18\"],\"data\":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,2,2,2,2,2,2,3,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,4,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,5,6,7,8,1,1,1,1,0,0,1,1,0,0,1,1,0,5,9,1,1,1,0,0,0,0,1,1,0,0,1,1,0,0,0,1,1,1,0,0,0,0,1,1,0,0,1,1,0,0,0,0,1,1,1,1,1,0,0,0,0,0,0,1,0,0,0,0,1]}","test3":"{\"width\":16,\"height\":12,\"block_width\":16,\"block_height\":16,\"sprites\":[0,\"sprite6\",\"sprite2\",\"import-wjuppahb0zse:1,12\",\"import-sprite2\",\"sprite3\",\"sprite8\"],\"data\":[1,1,1,1,1,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,3,3,3,3,1,1,1,1,2,2,2,2,2,2,2,2,4,4,4,4,1,1,1,1,2,5,2,2,2,2,2,2,4,4,4,4,1,1,1,1,1,1,1,1,1,6,6,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]}"},"sounds":[],"music":[{"file":"chase.mp3","version":1,"size":5147964,"properties":{}}]};
+var graphics = "M1";
+
+</script><script type="text/javascript">var orientation = 'any' ;
+var aspect = 'free' ;
+var ms_libs = [] ;
+window.skip_service_worker = true;
+window.exported_project = true;
+window.ms_use_server = false ;
+</script><script src="compiler.js"></script><script src="parser.js"></script><script src="processor.js"></script><script src="program.js"></script><script src="routine.js"></script><script src="runner.js"></script><script src="token.js"></script><script src="tokenizer.js"></script><script src="transpiler.js"></script><script src="microengine.js"></script></body><script type="text/javascript">//
+//
+// The game is started with the code below.
+// Once you have received the "started" signal (see below),
+// you can do the following:
+// 1) Inject functions or objects into the global context of the microStudio engine, example:
+//
+//   window.player.setGlobal("special_callback",function(x) { console.info(x) }) ;
+//   // Your microScript code can now call the "special_callback" function
+//
+// 2) Call microScript global functions from your JavaScript code, example:
+//
+//   window.player.call("call_me_from_javascript",[10,1000]) ;
+//   // arguments to the function call are provided as an array
+//
+// 3) Run a microScript code snippet from your JavaScript code, example:
+//
+//   window.player.exec("player.position_x = 50",function(result) { console.log(result) ; }) ;
+//
+
+window.addEventListener("load",function() {
+  window.player = new Player(function(event) {
+    if (event.name == "started") {
+      // signal that the game is started
+    }
+    else if (event.name == "log") {
+      // console.info(event.data) ;
+    }
+  }) ;
+  document.body.focus() ;
+}) ;
+
+</script><script id="code" type="text/x-microscript">
+
+
+// file: enemy.ms
+function()
+// Enemy-Initialisierung
+initenemy = function()
+  enemys = []
+  global.kills = 0
+  schwung_enemys = []
+  
+  
+  // Lädt die Hitboxen für die Angriffe
+  for i = 0 to 70
+    eschwunghtb[i] = new hb.obj("schwunghtb", hb.asset("player/schwung_hitbox", "ani", 0, 1))
+  end
+  
+  // Lädt die Angriffe (Objekte)
+  for i = 0 to 70
+    schwung_enemys[i] = new hb.obj("schwung", hb.asset("player/schwung", "ani", 0, 1))
+    schwung_enemys[i].hitbox.set(eschwunghtb[i].body)
+    schwung_enemys[i].tags = ["schwung_enemy"]
+  end
+  // Animationen laden
+  enemytex = object
+    idle = object
+      front = hb.asset("enemy/gnome/idle/front", "ani", 0, 1)
+      back  = hb.asset("enemy/gnome/idle/back", "ani", 0, 1)
+      right = hb.asset("enemy/gnome/idle/right", "ani", 0, 1)
+      left  = hb.asset("enemy/gnome/idle/left", "ani", 0, 1)
+    end
+    walking = object
+      front = hb.asset("enemy/gnome/walking/front", "ani", 0, 1)
+      back  = hb.asset("enemy/gnome/walking/back", "ani", 0, 1)
+      right = hb.asset("enemy/gnome/walking/right", "ani", 0, 1)
+      left  = hb.asset("enemy/gnome/walking/left", "ani", 0, 1)
+    end
+  end
+end
+
+// Funktion zum Spawnen von Gegnern
+enemyspawn = function(x, y)
+  // Erstellt ein Gegner Objekt, konfiguriert es und platziert es in der Welt
+  local enemy = new hb.obj("enemy", enemytex.idle.front, ["enemy"], x, y, enemyaction)
+  enemy.scale(1.75)
+  enemy.lp = 50
+  enemy.prio = 28
+  enemy.di = "front"
+  
+  // Despawn-Timer für jeden Gegner einzeln initialisieren
+  enemy.despawnTimer = 0
+
+  enemys.push(enemy.id)
+
+  // NoClip: Gegner kollidiert nicht mit Player / anderen Gegnern
+  enemy.body.collisionFilter.group = -1
+  for p in enemy.body.parts
+    p.collisionFilter.group = -1
+  end
+
+  world.add(enemy)
+  return enemy
+end
+
+// Gegner Code
+enemyaction = function(self)
+  local origin = bridgejs("origin")
+  
+  // Angriff Cooldown
+  self.attackcooldown -= 1
+  if self.attackcooldown < 0 then
+    self.attack = 0
+    self.attackcooldown = 50
+  end
+  
+  // Überprüfung auf Schaden
+  self.lplock -= 1
+  if self.lplock < 1 then
+    for things in self.collisions()
+      if things.tags.contains("schwung_player") then
+        self.lp -= 10
+        self.sprite.tint = 0xFF0000
+        after 40 do
+          self.sprite.tint = 0xFFFFFF
+        end
+        self.lplock = 30
+      end
+    end
+  end
+  
+  // Gegner Tod
+  if self.lp < 0 then
+    self.sprite.tint = 0
+    after 250 do
+      if not self.isdead then
+        self.isdead = true
+        // Kills plus eins
+        global.kills = kills + 1
+        
+        // Entfernt sich selber
+        world.remove(self)
+        world.remove(schwung_enemys[enemys.indexOf(self.id)])
+        enemys.removeElement(self.id)
+      end
+    end
+    origin.Matter.Body.setVelocity(self.body, object x = 0 y = 0 end)
+    return
+  end
+  
+  // Setzt Dreh-Geschwindigkeit auf 0 indem Dreh-Widerstand auf Unendlich gesetzt wird
+  origin.Matter.Body.setInertia(self.body, 1e308)
+  
+  // Gültigkeits-Checks
+  if enemyInvalid(self, origin) then return end
+  
+  // Positionen & Distanz berechnen
+  local enemyPos = self.position.get()
+  local playerPos = player.position.get()
+  local distToPlayer = sqrt((playerPos.x - enemyPos.x)^2 + (playerPos.y - enemyPos.y)^2)
+  
+  // Angriff ausführen
+  angriff(self.attack, self, schwung_enemys[enemys.indexOf(self.id)],0)
+  
+  // Wenn nah am Spieler, dann stehenbleiben und angreifen
+  if enemyHandleNah(self, origin, distToPlayer) then return end
+  
+  // Wenn zu weit weg vom Spieler, dann einfrieren (und nach 10 Sek despawnen)
+  if enemyHandleFern(self, origin, distToPlayer) then return end
+  
+  // Sensoren auswerten
+  local frei = enemyCheckSensors(self, origin, enemyPos)
+  
+  // Bewegung berechnen
+  local moveVelocity = enemyComputeMovement(self, enemyPos, playerPos, frei)
+  
+  // Diagonal-Ausgleich für gleichmäßige Geschwindigkeit
+  if moveVelocity.x != 0 and moveVelocity.y != 0 then
+    moveVelocity.x = moveVelocity.x * 0.7071
+    moveVelocity.y = moveVelocity.y * 0.7071
+  end
+  
+  // Animation & Geschwindigkeit setzen
+  setEnemyAnimation(self, moveVelocity.x, moveVelocity.y)
+  origin.Matter.Body.setVelocity(self.body, moveVelocity)
+end
+
+// Prüft ob der Gegner-Status ungültig ist
+enemyInvalid = function(self, origin)
+  if not origin then return true end
+  if not player or not player.body then return true end
+  if not self.currentWorld or not self.currentWorld.physicsEngine then return true end
+  return false
+end
+
+// Handhabt den Zustand wenn der Gegner nah am Spieler ist
+enemyHandleNah = function(self, origin, distToPlayer)
+  // Stop-Distanz mit Hysterese gegen Flackern an der Grenze
+  local stopDist = 25
+  if self.istNah then stopDist = 35 end
+
+  if distToPlayer >= stopDist then
+    self.istNah = false
+    return false
+  end
+
+  // Spieler ist in Reichweite
+  self.istNah = true
+
+  // Stehen bleiben
+  local stopVel = object end
+  stopVel.x = 0
+  stopVel.y = 0
+  origin.Matter.Body.setVelocity(self.body, stopVel)
+
+  // Ausweich-Status zurücksetzen
+  self.aktuelleAusweichRichtung = ""
+  self.ausweichTimer = 0
+
+  // Idle-Animation abspielen
+  setEnemyAnimation(self, 0, 0)
+
+  // Angriff aktivieren
+  self.attack = 1
+  
+  return true
+end
+
+// Handhabt den Zustand wenn der Spieler zu weit weg ist
+enemyHandleFern = function(self, origin, distToPlayer)
+  // Maximale Reichweite mit Hysterese festlegen
+  local fernDist = 400
+  if self.istFern then fernDist = 380 end
+
+  if distToPlayer <= fernDist then
+    self.istFern = false
+    self.despawnTimer = 0 // Timer zurücksetzen, wenn der Spieler wieder nah genug ist
+    return false
+  end
+
+  // Spieler ist zu weit weg
+  self.istFern = true
+
+  // Despawn-Timer hochzählen
+  if not self.despawnTimer then self.despawnTimer = 0 end
+  self.despawnTimer = self.despawnTimer + 1
+
+  // Wenn 10 Sekunden erreicht sind, Gegner despawnen lassen
+  if self.despawnTimer >= 600 then
+    if not self.isdead then
+      self.isdead = true
+      
+      // Entfernt sich selbst und Angriffs-Objekte aus der Welt
+      world.remove(self)
+      world.remove(schwung_enemys[enemys.indexOf(self.id)])
+      enemys.removeElement(self.id)
+      numberofenemy -= 1
+    end
+    return true
+  end
+
+  // Stehen bleiben
+  local stopVel = object end
+  stopVel.x = 0
+  stopVel.y = 0
+  origin.Matter.Body.setVelocity(self.body, stopVel)
+
+  // Ausweich-Status zurücksetzen
+  self.aktuelleAusweichRichtung = ""
+  self.ausweichTimer = 0
+
+  // Idle-Animation abspielen ohne Angriff
+  setEnemyAnimation(self, 0, 0)
+
+  return true
+end
+
+// Prüft die 8 Fühler-Punkte um Hindernisse zu erkennen
+enemyCheckSensors = function(self, origin, enemyPos)
+  local matterWorld = self.currentWorld.physicsEngine.world
+  local allBodies = origin.Matter.Composite.allBodies(matterWorld)
+
+  local pDist = 40
+  local dDist = 40
+
+  // Definiert die sensorischen Zielpunkte
+  points = object
+    rechts        = object x = enemyPos.x + pDist  y = enemyPos.y        end
+    links         = object x = enemyPos.x - pDist  y = enemyPos.y        end
+    oben          = object x = enemyPos.x        y = enemyPos.y + pDist  end
+    unten         = object x = enemyPos.x        y = enemyPos.y - pDist  end
+    oben_rechts   = object x = enemyPos.x + dDist  y = enemyPos.y + dDist  end
+    oben_links    = object x = enemyPos.x - dDist  y = enemyPos.y + dDist  end
+    unten_rechts = object x = enemyPos.x + dDist  y = enemyPos.y - dDist  end
+    unten_links   = object x = enemyPos.x - dDist  y = enemyPos.y - dDist  end
+  end
+
+  // Einzelnen Sensorpunkt per Strahl (Ray) prüfen
+  local checkPoint = function(pt)
+    local hits = origin.Matter.Query.ray(allBodies, enemyPos, pt)
+    for h in hits
+      local b = h.body
+      if b and b != self.body and b != player.body then
+        local mainBody = b
+        if b.parent then mainBody = b.parent end
+        if mainBody.gameObject and mainBody.gameObject.tags and mainBody.gameObject.tags.includes("hitbox") then
+          return false
+        end
+      end
+    end
+    return true
+  end
+
+  // Ergebnisse für alle Richtungen sammeln
+  local frei = object
+    rechts        = checkPoint(points.rechts)
+    links         = checkPoint(points.links)
+    oben          = checkPoint(points.oben)
+    unten         = checkPoint(points.unten)
+    oben_rechts   = checkPoint(points.oben_rechts)
+    oben_links    = checkPoint(points.oben_links)
+    unten_rechts = checkPoint(points.unten_rechts)
+    unten_links   = checkPoint(points.unten_links)
+  end
+
+  // Sensorpunkte für spätere Berechnungen mitsenden
+  frei.points = points
+  return frei
+end
+
+// Berechnet die Geschwindigkeit inklusive Ausweichen und Separation
+enemyComputeMovement = function(self, enemyPos, playerPos, frei)
+  local espeed = 1.4
+  local points = frei.points
+
+  local moveVelocity = object end
+  moveVelocity.x = 0
+  moveVelocity.y = 0
+
+  // Zustandswerte initialisieren falls leer
+  if not self.ausweichTimer then self.ausweichTimer = 0 end
+  if not self.aktuelleAusweichRichtung then self.aktuelleAusweichRichtung = "" end
+
+  // Zielrichtung zum Spieler bestimmen
+  local wollenX = 0
+  local wollenY = 0
+  if playerPos.x > enemyPos.x + 5 then wollenX = 1
+  elsif playerPos.x < enemyPos.x - 5 then wollenX = -1
+  end
+  if playerPos.y > enemyPos.y + 5 then wollenY = 1
+  elsif playerPos.y < enemyPos.y - 5 then wollenY = -1
+  end
+
+  // Prüfen ob die Wunschrichtung blockiert ist
+  local wegBlockiert = false
+  if wollenX > 0 and not frei.rechts then wegBlockiert = true end
+  if wollenX < 0 and not frei.links  then wegBlockiert = true end
+  if wollenY > 0 and not frei.oben   then wegBlockiert = true end
+  if wollenY < 0 and not frei.unten  then wegBlockiert = true end
+  if wollenX > 0 and wollenY > 0 and not frei.oben_rechts  then wegBlockiert = true end
+  if wollenX < 0 and wollenY > 0 and not frei.oben_links   then wegBlockiert = true end
+  if wollenX > 0 and wollenY < 0 and not frei.unten_rechts then wegBlockiert = true end
+  if wollenX < 0 and wollenY < 0 and not frei.unten_links  then wegBlockiert = true end
+
+  // Ausweich-Timer herunterzählen und Weg blockiert halten
+  if self.ausweichTimer > 0 then
+    cleaner = true
+    wegBlockiert = true
+    self.ausweichTimer = self.ausweichTimer - 1
+  end
+
+  // Direkt zum Spieler bewegen falls der Weg frei ist
+  if not wegBlockiert then
+    self.aktuelleAusweichRichtung = ""
+    self.ausweichTimer = 0
+    moveVelocity.x = wollenX * espeed
+    moveVelocity.y = wollenY * espeed
+  else
+    // Ausweich-Modus aktivieren
+    local besteRichtung = enemyChooseEvade(self, playerPos, frei, points)
+
+    // Richtungswerte in Geschwindigkeit übersetzen
+    if besteRichtung == "rechts" then moveVelocity.x = espeed
+    elsif besteRichtung == "links" then moveVelocity.x = -espeed
+    elsif besteRichtung == "oben" then moveVelocity.y = espeed
+    elsif besteRichtung == "unten" then moveVelocity.y = -espeed
+    elsif besteRichtung == "oben_rechts" then moveVelocity.x = espeed moveVelocity.y = espeed
+    elsif besteRichtung == "oben_links" then moveVelocity.x = -espeed moveVelocity.y = espeed
+    elsif besteRichtung == "unten_rechts" then moveVelocity.x = espeed moveVelocity.y = -espeed
+    elsif besteRichtung == "unten_links" then moveVelocity.x = -espeed moveVelocity.y = -espeed
+    end
+  end
+
+  // Separation: Abstand zu anderen Gegnern halten
+  local origin = bridgejs("origin")
+  local matterWorld = self.currentWorld.physicsEngine.world
+  local allBodies = origin.Matter.Composite.allBodies(matterWorld)
+  
+  // Radius für den Mindestabstand festlegen
+  local minDistance = 10 
+  
+  for b in allBodies
+    // Prüfen ob das gefundene Objekt ein anderer Gegner ist
+    if b and b != self.body and b.gameObject and b.gameObject.tags and b.gameObject.tags.includes("enemy") then
+      local otherPos = b.position
+      local dx = enemyPos.x - otherPos.x
+      local dy = enemyPos.y - otherPos.y
+      local dist = sqrt(dx^2 + dy^2)
+      
+      // Bei Unterschreitung des Abstands eine Gegenkraft erzeugen
+      if dist < minDistance and dist > -1 then
+        local pushStrength = 6
+        moveVelocity.x = moveVelocity.x + (dx / dist) * pushStrength + 0.1
+        moveVelocity.y = moveVelocity.y + (dy / dist) * pushStrength + 0.1
+      end
+    end
+  end
+
+  return moveVelocity
+end
+
+// Wählt die beste freie Richtung zum Ausweichen aus
+enemyChooseEvade = function(self, playerPos, frei, points)
+  local besteRichtung = ""
+
+  // Aktuelle Richtung beibehalten falls sie noch frei ist (verhindert Zittern)
+  if self.aktuelleAusweichRichtung == "rechts" and frei.rechts then besteRichtung = "rechts"
+  elsif self.aktuelleAusweichRichtung == "links"  and frei.links  then besteRichtung = "links"
+  elsif self.aktuelleAusweichRichtung == "oben"   and frei.oben   then besteRichtung = "oben"
+  elsif self.aktuelleAusweichRichtung == "unten"  and frei.unten  then besteRichtung = "unten"
+  elsif self.aktuelleAusweichRichtung == "oben_rechts"  and frei.oben_rechts  and frei.oben  and frei.rechts then besteRichtung = "oben_rechts"
+  elsif self.aktuelleAusweichRichtung == "oben_links"   and frei.oben_links   and frei.oben  and frei.links  then besteRichtung = "oben_links"
+  elsif self.aktuelleAusweichRichtung == "unten_rechts" and frei.unten_rechts and frei.unten and frei.rechts then besteRichtung = "unten_rechts"
+  elsif self.aktuelleAusweichRichtung == "unten_links"  and frei.unten_links  and frei.unten and frei.links  then besteRichtung = "unten_links"
+  end
+
+  if besteRichtung != "" then return besteRichtung end
+
+  // Neue optimale Richtung ermitteln
+  local besteDist = 999999
+
+  // Kehrtwende-Sperre einrichten
+  local gegenRichtung = ""
+  if self.aktuelleAusweichRichtung == "rechts" then gegenRichtung = "links"
+  elsif self.aktuelleAusweichRichtung == "links" then gegenRichtung = "rechts"
+  elsif self.aktuelleAusweichRichtung == "oben" then gegenRichtung = "unten"
+  elsif self.aktuelleAusweichRichtung == "unten" then gegenRichtung = "oben"
+  elsif self.aktuelleAusweichRichtung == "oben_rechts" then gegenRichtung = "unten_links"
+  elsif self.aktuelleAusweichRichtung == "oben_links" then gegenRichtung = "unten_rechts"
+  elsif self.aktuelleAusweichRichtung == "unten_rechts" then gegenRichtung = "oben_links"
+  elsif self.aktuelleAusweichRichtung == "unten_links" then gegenRichtung = "oben_rechts"
+  end
+
+  // Kleines Rauschen einbauen um identische Werte aufzubrechen
+  local rnd = (random.next() - 0.5) * 6
+
+  // Distanzwerte für Richtung Rechts auswerten
+  if frei.rechts then
+    local mDist = abs(playerPos.x - points.rechts.x) + abs(playerPos.y - points.rechts.y) + rnd
+    if gegenRichtung == "rechts" then mDist = mDist + 5000 end
+    if mDist < besteDist then besteDist = mDist besteRichtung = "rechts" end
+  end
+  // Distanzwerte für Richtung Links auswerten
+  if frei.links then
+    local mDist = abs(playerPos.x - points.links.x) + abs(playerPos.y - points.links.y) - rnd
+    if gegenRichtung == "links" then mDist = mDist + 5000 end
+    if mDist < besteDist then besteDist = mDist besteRichtung = "links" end
+  end
+  // Distanzwerte für Richtung Oben auswerten
+  if frei.oben then
+    local mDist = abs(playerPos.x - points.oben.x) + abs(playerPos.y - points.oben.y) + rnd
+    if gegenRichtung == "oben" then mDist = mDist + 5000 end
+    if mDist < besteDist then besteDist = mDist besteRichtung = "oben" end
+  end
+  // Distanzwerte für Richtung Unten auswerten
+  if frei.unten then
+    local mDist = abs(playerPos.x - points.unten.x) + abs(playerPos.y - points.unten.y) - rnd
+    if gegenRichtung == "unten" then mDist = mDist + 5000 end
+    if mDist < besteDist then besteDist = mDist besteRichtung = "unten" end
+  end
+  // Distanzwerte für Richtung Oben-Rechts auswerten
+  if frei.oben_rechts and frei.oben and frei.rechts then
+    local mDist = abs(playerPos.x - points.oben_rechts.x) + abs(playerPos.y - points.oben_rechts.y) + rnd
+    if gegenRichtung == "oben_rechts" then mDist = mDist + 5000 end
+    if mDist < besteDist then besteDist = mDist besteRichtung = "oben_rechts" end
+  end
+  // Distanzwerte für Richtung Oben-Links auswerten
+  if frei.oben_links and frei.oben and frei.links then
+    local mDist = abs(playerPos.x - points.oben_links.x) + abs(playerPos.y - points.oben_links.y) - rnd
+    if gegenRichtung == "oben_links" then mDist = mDist + 5000 end
+    if mDist < besteDist then besteDist = mDist besteRichtung = "oben_links" end
+  end
+  // Distanzwerte für Richtung Unten-Rechts auswerten
+  if frei.unten_rechts and frei.unten and frei.rechts then
+    local mDist = abs(playerPos.x - points.unten_rechts.x) + abs(playerPos.y - points.unten_rechts.y) + rnd
+    if gegenRichtung == "unten_rechts" then mDist = mDist + 5000 end
+    if mDist < besteDist then besteDist = mDist besteRichtung = "unten_rechts" end
+  end
+  // Distanzwerte für Richtung Unten-Links auswerten
+  if frei.unten_links and frei.unten and frei.links then
+    local mDist = abs(playerPos.x - points.unten_links.x) + abs(playerPos.y - points.unten_links.y) - rnd
+    if gegenRichtung == "unten_links" then mDist = mDist + 5000 end
+    if mDist < besteDist then besteDist = mDist besteRichtung = "unten_links" end
+  end
+
+  // Gewählte Richtung sichern und Ausweich-Timer setzen
+  self.aktuelleAusweichRichtung = besteRichtung
+  if besteRichtung != "" then
+    self.ausweichTimer = 70
+  else
+    self.ausweichTimer = 0
+  end
+
+  return besteRichtung
+end
+
+// Steuert Animationen und Blickrichtungen basierend auf der Geschwindigkeit
+setEnemyAnimation = function(self, vx, vy)
+  if not self.di then self.di = "front" end
+  if not self.lastTex then self.lastTex = 0 end
+
+  local eani = "idle"
+  local eanispeed = 1.2
+
+  if vx != 0 or vy != 0 then
+    eani = "walking"
+    eanispeed = 3
+    // Ermittelt die Blickrichtung über die stärkste Bewegungsachse
+    if abs(vx) > abs(vy) then
+      if vx > 0 then self.di = "right" self.prio = 28
+      else self.di = "left" self.prio = 28
+      end
+    else
+      // Richtungsauswertung für die Y-Achse
+      if vy > 0 then self.di = "front" self.prio = 28
+      else self.di = "back" self.prio = 40
+      end
+    end
+  end
+
+  local eTex = enemytex[eani][self.di]
+  if eTex and eTex != self.lastTex then
+    self.animation.set(eTex, eanispeed / 60)
+    self.lastTex = eTex
+  end
+  self.animation.play()
+end
+end()
+
+
+
+// file: helper.ms
+function()
+angriff = function(on, entity, ani, m = 0)
+  // Initialisiere per-Entity Variablen falls nicht vorhanden
+  if entity.attacklock == 0 then entity.attacklock = 0 end
+  if entity.running == 0 then entity.running = 0 end
+  if entity.latest == 0 then entity.latest = 0 end
+  
+  if on == 1 and (entity.attacklock == 0 or entity.running == 1) then
+    // Initialisiere latest nur beim ersten Mal
+    if entity.latest == 0 then
+      entity.latest = ani
+      entity.latest.animation.set(hb.asset("player/schwung","ani",0,1), 180/60)
+      entity.latest.prio = entity.prio
+      world.add(entity.latest)
+      entity.running = 1
+      entity.latest.animation.play()
+    end
+    
+
+    
+    // Rotation basierend auf der Blickrichtung anpassen
+    if m == 0 then
+      
+      // Position setzen
+      entity.latest.position.set(
+        entity.x + (18 * (0 + (-1 * ("left" == entity.di)) + ("right" == entity.di))), 
+        entity.y + (20 * (0 + (-1 * ("back" == entity.di)) + ("front" == entity.di)))
+      )
+      
+      if entity.di == "front" then
+        entity.latest.position.setrot(90)
+      elsif entity.di == "back" then
+        entity.latest.position.setrot(270)
+      elsif entity.di == "left" then
+        entity.latest.position.setrot(180)
+      elsif entity.di == "right" then
+        entity.latest.position.setrot(0)
+      end
+    elsif m == 1 then // Hier wird Bogenmaß genutzt um es einfacher zu halten
+      targetX = mouse.x
+      targetY = mouse.y
+      
+      // Position setzen
+      abstand = 20
+      entity.latest.position.set(
+        entity.x + (cos(winkel) * abstand),
+        entity.y + (sin(winkel) * abstand)
+      )
+      
+      // Winkel berechnen (im Bogenmaß / Radians)
+      origin = bridgejs("origin")
+      winkel = atan2(-targetY, targetX)
+      
+      // Rotation auf den Schwung und dessen Physik-Body anwenden
+      if schwung and schwung.body then
+        origin.Matter.Body.setAngle(schwung.body, winkel)
+      end
+    end
+    
+    // Frame-Check auf entity.latest um das Animationsende abzufangen
+    if entity.latest and entity.latest.animation.currentframe() >= entity.latest.texture.length - 3 then
+      entity.running = 0
+      if entity.latest then
+        world.remove(entity.latest)
+        entity.latest = 0
+      end
+      entity.attacklock = 1
+    end
+    
+  elsif on == 0 then
+    // Angriff beenden und zurücksetzen
+    entity.attacklock = 0
+    if entity.latest and entity.latest != 0 then
+      world.remove(entity.latest)
+      entity.latest.animation.gotoframe(0)
+      entity.latest = 0
+    end
+  end
+end
+
+// Helfer zur Erstellung eines reinen Matter-Rechteck-Körpers
+createPureMatterRect = function(width, height, options)
+  origin = bridgejs("origin")
+  
+  // Standard-Objekt erstellen falls keine Optionen übergeben wurden
+  if not options or options == 0 then options = object end end
+  
+  // Standardwert für statische Körper festlegen
+  isStatic = 0 
+  if options.static != undefined then isStatic = options.static end 
+  
+  // Standardwert für die Reibung festlegen
+  friction = 0.1  
+  if options.friction != undefined then friction = options.friction end
+  
+  // Standardwert für die Dichte festlegen
+  density = 0.001
+  if options.density != undefined then density = options.density end
+  
+  // Standardwert für die Elastizität festlegen
+  restitution = 0.0
+  if options.restitution != undefined then restitution = options.restitution end
+  
+  // Optionen für die Matter-Engine zusammenstellen
+  matterOptions = object
+    isStatic = (isStatic == 1)
+    friction = friction
+    density = density
+    restitution = restitution
+    inertia = 0
+  end
+  
+  // Rohen Rechteck-Körper in Matter.js erzeugen
+  rawBody = origin.Matter.Bodies.rectangle(0, 0, width, height, matterOptions)
+  
+  // Rotation einfrieren falls die Option aktiv ist
+  if options.fixedRotation == 1 or options.fixedRotation == true then
+    origin.Matter.Body.setInertia(rawBody, 1e308)
+    origin.Matter.Body.setAngularVelocity(rawBody, 0)
+  end
+  
+  return rawBody
+end
+  
+  
+  
+  
+end()
+
+
+
+// file: lib/ajgecko/hummingbird/hummingbird_core.ms
+function()
+hummingbird = class
+  ready = 0
+  constructor = function()
+    global.hbconstant = this
+  end
+  
+  waitready = function()
+    if ready == 0 then
+      sleep 100
+      this.waitready()
+    else
+      sleep 10
+    end
+  end
+  
+  // Lädt Pixi.js, Matter.js und Babylon.js und überprüft ob diese erfolgreich geladen werden
+  init = function(enable3d = 1)
+    do // Führt sich auf einem eigenen Thread aus um nicht von Sleep betroffen zu sein
+      print("-- hummingbird init --")
+      starttime = system.time()
+      print(" status: Loading...")
+      
+      // Laden der Librarys
+      if enable3d == 1 then
+        do
+          system.javascript("setup3d()")
+          system.javascript("origin.status._3d_ = (true)")
+        end
+      else
+        do
+          system.javascript("origin.status.babylonready = 'disabled'")
+        end
+      end
+      do
+        system.javascript("setup2d()")
+      end
+      do
+        system.javascript("setupPhysics()")
+      end
+      
+      // Überprüfung ob es korrekt geladen ist
+      failedattemps = 0
+      status = every 200 milliseconds do
+        origin = bridgejs("origin")
+        all_ok_temp = 1
+        for st in origin.status 
+          if not origin.status[st] then
+            if st == "babylonready" and enable3d == 0 then
+              continue
+            end
+              
+            all_ok_temp = 0
+            break
+            
+          end
+        end
+        if all_ok_temp == 1 then
+          ready = 1
+          print(" status: Ready")
+          print(" ")
+          print(" - debug info -")
+          origin = bridgejs("origin")
+          for st in origin.status
+            print(" "+st+ ": " + origin.status[st])
+          end
+          print(" time needed: " + (system.time() - starttime)/1000 + "sec")
+          status.pause()
+        else
+          print(" status: Loading... ")
+          failedattemps += 1
+          if failedattemps > 50 then
+            print("Error: Hummingbird failed to load")
+            print("- debug info -")
+            for st in origin.status 
+              print(st+ ": " + origin.status[st])
+            end
+            status.pause()
+          end
+        end
+      end
+    end  
+  end
+    
+  // Objekt (2d)
+  obj = class
+    constructor = function(name,texture,tags=[],x=0,y=0,action=0)
+    
+      this.name = name
+      
+      this.label = "obj"
+      
+      this.id = random.nextInt(1000000000000)
+      
+      local origin = bridgejs("origin")
+      
+      // Speicher für Texturen (Erlaubt Einzeltextur oder Liste für Animationen)
+      this.texture = texture
+      local initialTextures = []
+      if texture and texture.length != undefined then
+        initialTextures = texture
+      else
+        initialTextures = [texture]
+      end
+      
+      this.sprite = new origin.PIXI.AnimatedSprite(initialTextures)
+      this.sprite.anchor.set(0.5)
+      this.sprite.animationSpeed = 1/60
+      this.sprite.autoUpdate = true
+      
+      // Wenn es direkt mehrere Frames hat, spielen wir es ab
+      if initialTextures.length > 1 then
+        this.sprite.play()
+      end
+      
+      this.currentWorld = 0
+      
+      local baseTexture = initialTextures[0]
+      
+      local options = object
+        isSensor = false
+        isStatic = false
+      end
+      
+      this.body = origin.createBodyFromTexture(baseTexture, this.sprite.width, this.sprite.height, options)
+      this.body.gameObject = this
+      if this.body and this.body.parts then
+        for i = 0 to this.body.parts.length - 1
+          this.body.parts[i].gameObject = this
+        end
+      end
+      
+      // Position
+      this.x = x
+      this.y = y
+      this.position.set(x,y)
+      this.rotation = 0
+      
+      // Scale
+      this.scaleFactor = 1 // Interner Name geändert, um Konflikt mit der scale() Funktion zu vermeiden
+      this.dscalex = this.sprite.width // default scale x
+      this.dscaley = this.sprite.height // default scale y
+      this.sprite.width *= this.scaleFactor
+      this.sprite.height *= this.scaleFactor
+      
+      // Hitbox an die neue Skalierung anpassen
+      if this.body then
+        origin.Matter.Body.scale(this.body, this.scaleFactor, this.scaleFactor)
+      end
+      
+      // Eigene Grafik-Ebene für das Debugging dieses Objekts
+      this.debugGraphics = new origin.PIXI.Graphics()
+      
+      // Layer
+      this.prio = 0 
+      
+      // Action ist ein Speicher für Custom Code
+      this.action = action
+      
+      // Tags
+      this.tags = tags
+      
+      local parent = this
+      
+      // Positions-Unterobjekt
+      this.position = object
+        // Gibt die X-Koordinate zurück
+        x = function()
+          return parent.x
+        end
+        
+        // Gibt die Y-Koordinate zurück
+        y = function()
+          return parent.y
+        end
+        
+        // Setzt die X-Koordinate
+        setx = function(newX)
+          parent.x = newX
+          
+          if parent.body then
+            local origin = bridgejs("origin")
+            origin.Matter.Body.setPosition(parent.body, object x = newX y = parent.y end)
+            parent.body.isSleeping = false
+          end
+          
+          if parent.sprite then
+            parent.sprite.x = newX
+          end
+        end
+
+        // Setzt die Y-Koordinate
+        sety = function(newY)
+          parent.y = newY
+          
+          if parent.body then
+            local origin = bridgejs("origin")
+            origin.Matter.Body.setPosition(parent.body, object x = parent.x y = newY end)
+            parent.body.isSleeping = false
+          end
+          
+          if parent.sprite then
+            parent.sprite.y = newY
+          end
+        end
+        
+        // Setzt eine neue Position und synchronisiert sie sofort mit dem Matter-Body
+        set = function(newX, newY)
+          parent.x = newX
+          parent.y = newY
+          
+          if parent.body then
+            local origin = bridgejs("origin")
+            origin.Matter.Body.setPosition(parent.body, object x = newX y = newY end)
+            parent.body.isSleeping = false
+          end
+          
+          if parent.sprite then
+            parent.sprite.x = newX
+            parent.sprite.y = newY
+          end
+        end
+        
+        // Gibt ein Koordinaten-Objekt zurück
+        get = function()
+          return object x = parent.x y = parent.y end
+        end
+        
+        setrot = function(rota)
+          origin.Matter.Body.setAngle(parent.body,rota * (PI / 180))
+        end
+        getrot = function()
+          return (parent.body.angle * (180 / PI))
+          
+        end
+      end
+      this.position.set(x,y)
+      
+      this.animation = object
+        // Setzt eine komplett neue Animation (Erwartet ein Liste von Texturen)
+        set = function(anilist, speed = 1/60)
+          if typeof(anilist) == "object" and anilist.length then
+            parent.texture = anilist
+            parent.sprite.textures = anilist
+            parent.sprite.animationSpeed = speed
+            parent.sprite.gotoAndPlay(0)
+            
+            // WICHTIG: Sprite-Größe nach Texturwechsel korrigieren
+            parent.sprite.width = parent.dscalex * parent.scaleFactor
+            parent.sprite.height = parent.dscaley * parent.scaleFactor
+          end
+        end
+        
+        // Gibt das aktuelle Pixi-Animationsobjekt zurück
+        get = function()
+          return parent.sprite
+        end
+        
+        // Gibt den Index des aktuellen Frames zurück (0-basiert)
+        currentframe = function()
+          if parent.sprite then
+            return parent.sprite.currentFrame
+          end
+          return 0
+        end
+        
+        // Startet die Animation
+        play = function()
+          parent.sprite.play()
+        end
+        
+        // Stoppt die Animation auf dem aktuellen Frame
+        stop = function()
+          parent.sprite.stop()
+        end
+        
+        // Ändert die Animationsgeschwindigkeit
+        speed = function(speed)
+          parent.sprite.animationSpeed = speed
+        end
+        
+        // Springt zu einem bestimmten Frame
+        gotoframe = function(frame)
+          if frame >= 0 and frame < parent.sprite.totalFrames then
+            parent.sprite.gotoAndStop(frame)
+          end
+        end
+      end
+      
+      // Hitbox-Unterobjekt
+      this.hitbox = object
+        // Setzt die Hitbox auf die Maße eines spezifischen Animations-Frames
+        settoframe = function(frame)
+          if parent.texture and parent.texture.length != undefined then
+            if frame >= 0 and frame < parent.texture.length then
+              local targetTexture = parent.texture[frame]
+              local origin = bridgejs("origin")
+              
+              local oldBody = parent.body
+              local currentWorld = parent.currentWorld
+              if oldBody and currentWorld and currentWorld.physicsEngine then
+                origin.Matter.Composite.remove(currentWorld.physicsEngine.world, oldBody)
+              end
+              
+              // Optionen für den neuen Body beibehalten
+              local currentOptions = object
+                isSensor = oldBody.isSensor
+                isStatic = oldBody.isStatic
+              end
+              
+              parent.body = origin.createBodyFromTexture(targetTexture, parent.sprite.width / parent.scaleFactor, parent.sprite.height / parent.scaleFactor, currentOptions)
+              
+              parent.body.gameObject = parent
+              if parent.body.parts then
+                for i = 0 to parent.body.parts.length - 1
+                  parent.body.parts[i].gameObject = parent
+                end
+              end
+              
+              origin.Matter.Body.scale(parent.body, parent.scaleFactor, parent.scaleFactor)
+              origin.Matter.Body.setPosition(parent.body, object x = parent.x y = parent.y end)
+              origin.Matter.Body.setAngle(parent.body, parent.rotation)
+              
+              if currentWorld and currentWorld.physicsEngine then
+                origin.Matter.Composite.add(currentWorld.physicsEngine.world, parent.body)
+              end
+            end
+          end
+        end
+        
+        // Erstellt eine an die aktuelle Weite und Höhe (Skalierung) angepasste Hitbox
+        settoscale = function()
+          local origin = bridgejs("origin")
+          local currentWorld = parent.currentWorld
+          
+          if parent.body and currentWorld and currentWorld.physicsEngine then
+            origin.Matter.Composite.remove(currentWorld.physicsEngine.world, parent.body)
+          end
+          
+          local currentOptions = object
+            isSensor = parent.body.isSensor
+            isStatic = parent.body.isStatic
+          end
+          
+          local width = parent.dscalex
+          local height = parent.dscaley 
+          
+          parent.body = origin.Matter.Bodies.rectangle(parent.x, parent.y, width, height, currentOptions)
+          
+          if parent.body then
+            parent.body.gameObject = parent
+            if parent.body.parts then
+              for i = 0 to parent.body.parts.length - 1
+                parent.body.parts[i].gameObject = parent
+              end
+            end
+            
+            origin.Matter.Body.scale(parent.body, parent.scaleFactor, parent.scaleFactor)
+            origin.Matter.Body.setPosition(parent.body, object x = parent.x y = parent.y end)
+            origin.Matter.Body.setAngle(parent.body, parent.rotation)
+            
+            if currentWorld and currentWorld.physicsEngine then
+              origin.Matter.Composite.add(currentWorld.physicsEngine.world, parent.body)
+            end
+          end
+        end
+        // Gibt die Hitbox (den Matter-Body) zurück
+        get = function()
+          return parent.body
+        end
+        
+        // Überschreibt den Body von außen mit einem komplett neuen Matter-Body
+        set = function(newbody)
+          local origin = bridgejs("origin")
+          local currentWorld = parent.currentWorld
+          
+          if parent.body and currentWorld and currentWorld.physicsEngine then
+            origin.Matter.Composite.remove(currentWorld.physicsEngine.world, parent.body)
+          end
+          
+          parent.body = newbody
+          if parent.body then
+            parent.body.gameObject = parent
+            if parent.body.parts then
+              for i = 0 to parent.body.parts.length - 1
+                parent.body.parts[i].gameObject = parent
+              end
+            end
+            
+            origin.Matter.Body.setPosition(parent.body, object x = parent.x y = parent.y end)
+            origin.Matter.Body.setAngle(parent.body, parent.rotation)
+            
+            if currentWorld and currentWorld.physicsEngine then
+              origin.Matter.Composite.add(currentWorld.physicsEngine.world, parent.body)
+            end
+          end
+        end
+      end
+    end
+    
+    // Schaltet den Geist-Modus (Kollisionen an/aus) um
+    ghost = function(isGhost)
+      if this.body then
+        if isGhost == 1 or isGhost == true then
+          this.body.isSensor = true
+          if this.body.parts then
+            for p in this.body.parts
+              p.isSensor = true
+            end
+          end
+        else
+          this.body.isSensor = false
+          if this.body.parts then
+            for p in this.body.parts
+              p.isSensor = false
+            end
+          end
+        end
+      end
+    end
+
+    // Skaliert das Sprite und passt die Hitbox proportional an
+    scale = function(newScale)
+      local origin = bridgejs("origin")
+      
+      // Berechne den Skalierungsfaktor relativ zur aktuellen Skalierung für Matter.js
+      local relativeScale = newScale / this.scaleFactor
+      this.scaleFactor = newScale
+      
+      // Pixi Sprite-Größe anpassen
+      if this.sprite then
+        this.sprite.width = this.dscalex * this.scaleFactor
+        this.sprite.height = this.dscaley * this.scaleFactor
+      end
+      
+      // Matter.js Hitbox-Größe anpassen
+      if this.body then
+        origin.Matter.Body.scale(this.body, relativeScale, relativeScale)
+      end
+    end
+    
+    static = function(mode)
+      local origin = bridgejs("origin")
+      if this.body then
+        if mode == 1 then
+          origin.Matter.Body.setStatic(this.body, true)
+        else
+          origin.Matter.Body.setStatic(this.body, false)
+          // Zwingt Matter.js, die physikalischen Werte (Masse, Dichte) wieder anzupassen:
+          origin.Matter.Body.setMass(this.body, this.body.mass) 
+          this.body.isSleeping = false
+        end
+      end
+    end
+    
+    render = function(stage,targetscreen,debug=0,renderoff=0)
+      local origin = bridgejs("origin")
+      local children = stage.children
+      local sprite = this.sprite
+      local debugGraphics = this.debugGraphics
+      local body = this.body
+    
+      if not children.includes(sprite) then
+        stage.addChild(sprite)
+      end
+    
+      // Debug Anzeige für Hitboxen
+      if debug == 1 and body then
+        if not children.includes(debugGraphics) then
+          stage.addChild(debugGraphics)
+        end
+    
+        // Erstellt die Debug Grafik aus dem Body
+        debugGraphics.clear()
+    
+        debugGraphics.lineStyle(max(0.2*scaleFactor,0.4), 0xFF0000, 1)    // Rote Linie
+        debugGraphics.beginFill(0xFF0000, 0.2)     // Rote Füllung
+    
+        local parts = body.parts
+        local partsLength = parts.length
+    
+        for j = 0 to partsLength - 1
+          local part = parts[j]
+          if partsLength > 1 and j == 0 then continue end
+    
+          local vertices = part.vertices
+          local verticesLength = vertices.length
+          if verticesLength >= 2 then
+            debugGraphics.moveTo(vertices[0].x, vertices[0].y)
+            for k = 1 to verticesLength - 1
+              debugGraphics.lineTo(vertices[k].x, vertices[k].y)
+            end
+            debugGraphics.lineTo(vertices[0].x, vertices[0].y)
+          end
+        end
+    
+        debugGraphics.endFill()
+        debugGraphics._zIndex = this.prio
+    
+      else
+        // Beim Ausschalten alles sauber leeren
+        if debugGraphics then
+          debugGraphics.clear()
+        end
+    
+        if children.includes(debugGraphics) then
+          stage.removeChild(debugGraphics)
+        end
+      end
+    
+      sprite.zIndex = this.prio
+    
+      if renderoff != 1 then
+        targetscreen.render(stage)
+      end
+    end
+    
+    play = function(phyEngine)
+      local origin = bridgejs("origin")
+      
+      if this.body.isSleeping == true then
+        this.body.isSleeping = false
+      end
+      
+      if phyEngine and this.body then
+        local allBodies = origin.Matter.Composite.allBodies(phyEngine.world)
+        if not allBodies.includes(this.body) then
+          origin.Matter.Composite.add(phyEngine.world, this.body)
+        end
+      end
+      
+      if this.body then
+        // Die Hitbox (Matter.js) ist immer der Chef! Die Microscript-Variablen folgen ihr.
+        this.x = this.body.position.x
+        this.y = this.body.position.y
+        this.rotation = this.body.angle
+      end
+      
+      this.sprite.x = this.x
+      this.sprite.y = this.y
+      this.sprite.rotation = this.rotation
+      
+      if this.action != 0 then
+        this.action(this)
+      end
+    end
+    
+    // Entfernt sich selber aus der Welt
+    selfremove = function()
+      local origin = bridgejs("origin")
+      if not this.currentWorld or this.currentWorld == 0 then return end
+      local w = this.currentWorld
+      
+      if this.sprite and w.stage.children.includes(this.sprite) then
+        w.stage.removeChild(this.sprite)
+      end
+      
+      if this.debugGraphics and w.stage.children.includes(this.debugGraphics) then
+        w.stage.removeChild(this.debugGraphics)
+        this.debugGraphics.clear()
+      end
+      
+      if this.body and w.physicsEngine then
+        origin.Matter.Composite.remove(w.physicsEngine.world, this.body)
+      end
+    end
+    
+    // Gibt die alle Kolisionen (die anderen Objekte) vom Objekt zurück zurück
+    collisions = function()
+      local origin = bridgejs("origin")
+      phyengine = this.currentWorld.physicsEngine
+      
+      if not phyengine then return [] end
+      if not this.body then return [] end
+      
+      local allBodies = origin.Matter.Composite.allBodies(phyengine.world)
+      local otherBodies = []
+      
+      for i = 0 to allBodies.length - 1
+        if allBodies[i] != this.body then
+          otherBodies.push(allBodies[i])
+        end
+      end
+      
+      local collisionsList = origin.Matter.Query.collides(this.body, otherBodies)
+      local collidedWith = []
+      
+      for i = 0 to collisionsList.length - 1
+        local col = collisionsList[i]
+        if col.bodyA == this.body then
+          collidedWith.push(col.bodyB)
+        else
+          collidedWith.push(col.bodyA)
+        end
+      end
+      
+      local results = []
+      for i = 0 to collidedWith.length - 1
+        local hit = collidedWith[i]
+        if this.body.parts.includes(hit) then
+          continue
+        else
+          local mainBody = hit
+          if hit.parent then mainBody = hit.parent end
+          if mainBody.gameObject then
+            local gObj = mainBody.gameObject
+            if not results.includes(gObj) then 
+              results.push(gObj)
+            end
+          else
+            results.push(0)
+          end
+        end
+      end
+      return results
+    end
+    
+    // Erstellt ein neues gleiches Objekt
+    clone = function()
+      local origin = bridgejs("origin")
+      
+      local newObj = new global.hbconstant.obj(this.name, this.texture, this.tags, this.x, this.y, this.action)
+      
+      newObj.scale(this.scaleFactor)
+      newObj.prio = this.prio
+      newObj.rotation = this.rotation
+      
+      
+      if this.body then
+        if this.body.isStatic then 
+          newObj.static(1) 
+        else 
+          newObj.static(0) 
+        end
+        
+        if this.body.isSensor then 
+          newObj.ghost(1) 
+        else 
+          newObj.ghost(0) 
+        end
+      end
+      
+      if this.body and newObj.body then
+        origin.Matter.Body.setPosition(newObj.body, object x = this.body.position.x y = this.body.position.y end)
+        origin.Matter.Body.setAngle(newObj.body, this.body.angle)
+        origin.Matter.Body.setVelocity(newObj.body, object x = this.body.velocity.x y = this.body.velocity.y end)
+        origin.Matter.Body.setAngularVelocity(newObj.body, this.body.angularVelocity)
+      end
+      
+      return newObj
+    end
+  end
+
+  
+  canvas = class
+    screen3d = class
+      constructor = function(layer,name)
+      local origin = bridgejs("origin")
+      this.BABYLON = origin.BABYLON
+      this.layer = layer
+      this.canvas = origin.createExternalCanvas3d(name,this.layer)
+      this.engine = origin.makeBabylonEngine(this.canvas)
+      end
+      
+      render = function(scene,camera)
+        if camera then
+          if screen.width < screen.height then
+            camera.fovMode = BABYLON.Camera.FOVMODE_HORIZONTAL_FIXED
+          else
+            camera.fovMode = BABYLON.Camera.FOVMODE_VERTICAL_FIXED
+          end
+        end
+        scene.render()
+      end
+      
+      setlayer = function(newlayer)
+        this.layer = newlayer
+        this.canvas.style.zIndex = newlayer //Machte die Änderung sofort wirksam
+        this.canvas.currentLayer = newlayer //Sorgt dafür das die Änderung bleibt auch bei Größen veränderungen
+      end
+      
+      getlayer = function()
+        this.layer = this.canvas.style.zIndex
+        return this.canvas.style.zIndex
+      end
+      
+      destroy = function()
+        if this.engine then
+          this.engine.dispose() //Stoppt die Render-Schleife und gibt GPU-Speicher frei
+        end
+        if this.canvas and this.canvas.remove then
+          this.canvas.remove() //Entfernt das Canvas-Element aus dem HTML-DOM
+        end
+        //Setzt Referenzen auf null, damit der Garbage Collector greifen kann
+        this.engine = null
+        this.canvas = null
+        this.BABYLON = null
+      end
+    end
+  
+    screen2d = class
+      constructor = function(layer, name)
+        local origin = bridgejs("origin")
+        this.PIXI = origin.PIXI
+        this.layer = layer
+        this.canvas = origin.createExternalCanvas2d(name, this.layer)
+        this.renderer = origin.makePixiRenderer(this.canvas)
+      end
+      
+      render = function(stage)
+        if this.renderer and stage then
+          local cvs = this.renderer.view
+          
+          //Hollt sich die Skalierung und rundet
+          local targetWidth = floor(cvs.targetLogicalWidth or cvs.width)
+          local targetHeight = floor(cvs.targetLogicalHeight or cvs.height)
+          if this.renderer.width != targetWidth or this.renderer.height != targetHeight then
+            this.renderer.resize(targetWidth, targetHeight)
+          end
+          
+          //Nullpunkt in die Mitte setzen
+          stage.position.set(floor(this.renderer.width / 2)+1, floor(this.renderer.height / 2))
+          stage.roundPixels = false
+          this.renderer.render(stage)
+        end
+      end
+      
+      setlayer = function(newlayer)
+        this.layer = newlayer
+        this.canvas.style.zIndex = newlayer
+        this.canvas.currentLayer = newlayer
+      end
+      
+      getlayer = function()
+        this.layer = this.canvas.style.zIndex
+        return this.canvas.style.zIndex
+      end
+      
+      destroy = function()
+        if this.renderer then
+          //Entfernt den Renderer und das Canvas-Element
+          this.renderer.destroy(true) 
+        end
+        //Setzt Referenzen auf null, damit der Garbage Collector greifen kann
+        this.renderer = null
+        this.canvas = null
+        this.PIXI = null
+      end
+    end
+      
+    
+    all = function()
+      local allcvs = bridgejs("origin.allcanvas")
+      return allcvs()
+    end
+    list = function()
+      local allcvs = bridgejs("origin.allcanvas")
+      cvs_ = allcvs()
+      ids = []
+      for cvs in cvs_
+        if cvs.id == "" then
+          cvs.id = "master"
+        end
+        if cvs.id != 0 then
+          print(cvs.id+"-"+cvs.style["z-index"])
+        end
+        
+      end
+    end
+  end
+  
+  area = class
+    constructor = function()
+     this.label = "area"
+     this.con = []
+     this.currentWorld = 0
+     this.id = random.nextInt(1000000000000)
+    end
+    
+    add = function(element)
+      if not this.con.contains(element) then 
+        this.con.push(element)
+      end
+    end
+    
+    remove = function(element)
+      if this.con.contains(element) then 
+        this.con.removeElement(element)
+      end
+      if element and element.selfremove then
+        element.selfremove()
+      end
+    end
+    
+    render = function(stage,targetscreen,db)
+      for e in this.con
+        // Reicht die Welt an die eigenen Objekte weiter, falls gewechselt oder neu
+        if e and this.currentWorld and (not e.currentWorld or e.currentWorld != this.currentWorld) then
+          if e.currentWorld != 0 and e.selfremove then
+            e.selfremove()
+          end
+          e.currentWorld = this.currentWorld
+        end
+        e.render(stage,targetscreen,db,1)
+      end
+    end
+    
+    play = function(phyEngine)
+      for e in this.con
+        // Reicht die Welt im Play-Loop weiter
+        if e and this.currentWorld and (not e.currentWorld or e.currentWorld != this.currentWorld) then
+          if e.currentWorld != 0 and e.selfremove then
+            e.selfremove()
+          end
+          e.currentWorld = this.currentWorld
+        end
+        e.play(phyEngine)
+      end
+    end
+    
+    selfremove = function()
+      for e in this.con
+        if e and e.selfremove then
+          e.selfremove()
+        end
+      end
+      this.currentWorld = 0
+    end
+    
+    clone = function()
+      local newArea = new global.hbconstant.area()
+      
+      for e in this.con
+        if e.label == "obj" then
+          // Erstelle ein komplett neues Objekt mit den gleichen Basisdaten
+          local newObj = new global.hbconstant.obj(e.name, e.texture, e.tags, e.x, e.y, e.action)
+          
+          // Übertrage wichtige Zusatz-Eigenschaften
+          newObj.scale(e.scaleFactor)
+          newObj.prio = e.prio
+          if e.body.isStatic then newObj.static(1) else newObj.static(0) end
+          if e.body.isSensor then newObj.ghost(1) else newObj.ghost(0) end
+          
+          newArea.add(newObj)
+        end
+      end
+      
+      return newArea
+    end
+  end
+  
+  
+  // Welt-Klasse
+  world = class
+    constructor = function(type)
+    
+      this.label = "world"
+      
+      this.id = random.nextInt(1000000000000)
+      
+      this.con = [] // Container wo Objekte und Gebiete (areas) drinne liegen
+    
+      local origin = bridgejs("origin") // Origin
+      
+      this.cam = object
+        x = 0
+        y = 0
+        zoom = 1
+      end
+      
+      if type == "topdown" then
+        this.type = type
+      elsif type == "side" then
+        this.type = type
+      else
+         this.type = "topdown"
+      end
+      
+      // Physik Engine laden und konfigurieren
+      local engineOptions = object
+        gravity = object 
+          y = 1 
+        end
+      end
+      if type == "topdown" then
+        engineOptions.gravity.y = 0
+      elsif type == "side" then
+        engineOptions.gravity.y = 1
+      else
+        engineOptions.gravity.y = 0
+      end
+      this.physicsEngine = origin.Matter.Engine.create(engineOptions)
+      
+      // Stage erstellen
+      this.stage = new origin.PIXI.Container()
+    end
+    
+    add = function(element)
+      if this.con.contains(element) then
+        print(element.name)
+      end
+      if not this.con.contains(element) and element.label and element.label != "world" then 
+        this.con.push(element)
+      end
+      
+    end
+    
+    remove = function(element)
+      // Aus dem world-Container (this.con) entfernen
+      if this.con.contains(element) then 
+        this.con.removeElement(element)
+      end
+      element.selfremove()
+    end
+    
+    render = function(targetscreen,db)
+      this.stage.sortableChildren = true
+      this.stage.sortDirty = true
+      this.stage.sortChildren()
+      for e in this.con
+        if e and (not e.currentWorld or e.currentWorld != this) then 
+          if e.currentWorld != 0 then
+            e.selfremove()
+          end
+          e.currentWorld = this 
+        end
+        e.render(this.stage,targetscreen,db,1)
+      end
+      this.stage.pivot.set(cam.x,cam.y)
+      this.stage.position.set(screen.width / 2, screen.height / 2)
+      this.stage.scale.set(4*cam.zoom)
+      targetscreen.render(this.stage)
+    end
+    
+    play = function()
+      local origin = bridgejs("origin")
+      origin.Matter.Engine.update(this.physicsEngine, 1000 / system.update_rate)
+      for e in this.con
+        if e and (not e.currentWorld or e.currentWorld != this) then e.currentWorld = this end
+        e.play(this.physicsEngine)
+      end
+    end
+  end
+  
+  
+  // Asset-Funktion
+  asset = function(name, type="sprite", frame = 0, pixelperfect = 1)
+    local origin = bridgejs("origin")
+    local pixi = bridgejs("origin.PIXI")
+    
+    // "ani" für animierte Sprites (Gibt eine Liste von Texturen zurück)
+    if type == "ani" then
+      local mstexture = sprites[name]
+      if mstexture and mstexture.frames and mstexture.frames.length > 0 then
+        local textureArray = []
+        
+        // Gehe durch alle Frames des MicroScript-Sprites und mache Pixi-Texturen daraus
+        for i = 0 to mstexture.frames.length - 1
+          local msCanvas = mstexture.frames[i].canvas
+          if msCanvas then
+            local pixitexture = pixi.Texture.from(msCanvas)
+            if pixelperfect == 1 then
+              pixitexture.baseTexture.scaleMode = pixi.ENV.SCALE_MODES.NEAREST
+            end
+            textureArray.push(pixitexture)
+          end
+        end
+        
+        return textureArray // Gibt die fertige Liste für meinObjekt.animation.set() zurück
+      end
+      return false
+  
+    // "sprite" (Gibt ein einzelnes, spezifisches Frame zurück)
+      local mstexture = sprites[name]
+      if mstexture and mstexture.frames and mstexture.frames[frame] then
+        local msCanvas = mstexture.frames[frame].canvas
+        
+        if msCanvas then
+          local pixitexture = pixi.Texture.from(msCanvas)
+          if pixelperfect == 1 then
+            pixitexture.baseTexture.scaleMode = pixi.ENV.SCALE_MODES.NEAREST
+          end
+          
+          return pixitexture
+        end
+      end
+      return false
+   
+    // "map" (Map-Generierung)
+    elsif type == "map" then
+      local map = maps[name]
+      things = []
+      counter = 0
+      local tempcanvas = origin.tempcanvas()
+      
+      tempcanvas.width = map.width * map.block_width
+      tempcanvas.height = map.height * map.block_height
+      
+      local ctx = tempcanvas.getContext("2d")
+      for l in map.map
+        if typeof(l) == "string" then
+          local name2 = ""
+          local part = "0,0"
+          local element = 0
+          
+          if l.indexOf(":") == -1 then
+            name2 = l
+            part = "0,0"
+            if l.indexOf("-") == -1 then
+              name3 = name2
+            else
+              name3 = name2.replace("-","/")
+            end
+            element = map.sprites[name3]
+          else
+            local splitted = l.split(":")
+            name2 = splitted[0]
+            part = splitted[1]
+            if l.indexOf("-") == -1 then
+              name3 = name2
+            else
+              name3 = name2.replace("-","/")
+            end
+            element = map.sprites[name3]
+          end
+            
+          if element and element.frames and element.frames[0] then
+            local elementcanvas = element.frames[0].canvas
+            local element_ctx = elementcanvas.getContext("2d")
+            local part2 = part.split(",")
+            
+            local src_x = (part2[0] * 1) * map.block_width
+            local src_y = (part2[1] * 1) * map.block_height
+            local parttexure = element_ctx.getImageData(src_x, src_y, map.block_width, map.block_height)
+            
+            local blocks_per_row = map.width
+            local current_col = counter % blocks_per_row
+            local current_row = (counter - current_col) / blocks_per_row
+            
+            local draw_x = current_col * map.block_width
+            local draw_y = (map.height - 1 - current_row) * map.block_height
+            
+            ctx.drawImage(
+              elementcanvas, 
+              src_x, src_y, map.block_width, map.block_height, 
+              draw_x, draw_y, map.block_width, map.block_height
+            )
+          else
+            return false
+          end
+          
+        end
+        counter += 1
+      end
+      
+      local mapTexture = pixi.Texture.from(tempcanvas)
+      mapTexture.baseTexture.scaleMode = pixi.ENV.SCALE_MODES.NEAREST
+      
+      return mapTexture
+    else
+      return false
+    end
+  end
+  
+end
+end()
+
+
+
+system.javascript("""
+
+// javascript
+
+window.setup2d = function() {
+
+  // Lädt die PixiJS-Bibliothek über das CDN
+  async function loadPixi() {
+      const loadScript = (src) => new Promise((resolve, reject) => {
+        const s = document.createElement('script');
+        s.src = src;
+        s.crossOrigin = "anonymous";
+        s.onload = resolve;
+        s.onerror = reject;
+        document.head.appendChild(s);
+      });
+  
+      try {
+        
+        await loadScript('https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.4.2/pixi.min.js');
+        
+        if (!window.PIXI) throw new Error("PIXI v7 konnte nicht geladen werden.");
+        origin.PIXI = window.PIXI; 
+        
+        window.pixiStatus.ready = true;
+        origin.status.pixiready = true;
+
+      } catch (e) {
+        console.error("Pixi v7 Setup fehlgeschlagen:", e);
+        origin.status.pixiready = (false);
+      }
+  }
+  
+  // Erstellt ein externes Canvas-Element für die 2D-Rendering-Ebene
+  origin.createExternalCanvas2d = function(id = "pixiCanvas", zIndex = 8) {
+      let existing = document.getElementById(id);
+      if (existing) return existing;
+  
+      // Das Haupt-Canvas der microStudio-Engine suchen
+      let master = window.player.runtime.screen.canvas;
+      if (!master) return null;
+  
+      const newCanvas = document.createElement("canvas");
+      newCanvas.id = id;
+      newCanvas.currentLayer = zIndex;
+      
+      // Rechnet die neue Größe aus wenn das Fenster verändert wird (Wendet die neue Größe nicht an)
+      const syncSize = () => {
+        const rect = master.getBoundingClientRect();
+        
+        // CSS-Dehnung für den Browser (Das finale Bild wird gestreckt)
+        Object.assign(newCanvas.style, {
+          position: "fixed", 
+          top: rect.top + "px",
+          left: rect.left + "px",
+          width: rect.width + "px",
+          height: rect.height + "px",
+          zIndex: newCanvas.currentLayer,
+          pointerEvents: "none",
+          display: "block",
+          backgroundColor: "transparent",
+          border: "none",
+          outline: "none",
+          imageRendering: "pixelated"
+        });
+  
+        // Exakte microStudio-Proportionen berechnen
+        const aspect = master.width / master.height;
+        let logicalWidth, logicalHeight;
+        if (aspect >= 1) {
+          // Querformat berechnen
+          logicalHeight = 800;
+          logicalWidth = Math.round(800 * aspect);
+        } else {
+          // Hochformat berechnen
+          logicalWidth = 800;
+          logicalHeight = Math.round(800 / aspect);
+        }
+  
+      
+        // Das Canvas ändert seine eigene interne Größe
+        if (newCanvas.width !== logicalWidth || newCanvas.height !== logicalHeight) {
+          newCanvas.targetLogicalWidth = logicalWidth;
+          newCanvas.targetLogicalHeight = logicalHeight;
+        // Höhe wird vom Renderer später angewendet
+        }
+      };
+  
+      document.body.appendChild(newCanvas);
+      window.addEventListener("resize", syncSize);
+      
+      // Observer registrieren um Größenänderungen des Haupt-Canvas sofort zu bemerken
+      if (typeof ResizeObserver !== "undefined") {
+        const resizeObserver = new ResizeObserver(() => {
+          syncSize(); // Wird sofort ohne Verzögerung aufgerufen!
+        });
+        resizeObserver.observe(master);
+      } else {
+        // Fallback falls kein ResizeObserver unterstützt wird
+        // Führt Syncsize kontinuierlich im Intervall aus
+        setInterval(syncSize, 16); // 16ms sind etwa ~60 FPS
+      }
+      
+      // Initial einmal ausführen
+      syncSize();
+  
+      return newCanvas;
+  }
+  
+  // Erstellt den Pixi-Renderer auf Basis des übergebenen Canvas
+  origin.makePixiRenderer = function(canvas) {
+    const engine = origin.PIXI.autoDetectRenderer({
+      view: canvas,
+      backgroundAlpha: 0,
+      clearBeforeRender: true,
+      width: canvas.width,
+      height: canvas.height,
+      antialias: false,
+      autoDensity: false
+    });
+    return engine
+        
+    
+  }
+  
+  // Hilfsfunktion um alle Canvas-Elemente der Seite als Array zu erhalten
+  origin.allcanvas = function() { 
+    return Array.from(document.querySelectorAll('canvas')); 
+  }
+  
+  // Hilfsfunktion zur Erstellung eines temporären Canvas-Elements
+  origin.tempcanvas = function() {
+    return document.createElement('canvas')
+  }
+  
+  // Status-Variablen für das Pixi-System vorbereiten
+  window.pixiStatus = { ready: false };
+  origin.status.pixiready = false;
+  
+
+  // Den Ladevorgang für PixiJS starten
+  loadPixi();
+}
+
+""")
+
+
+
+system.javascript("""
+
+// javascript
+
+// Lädt die Babylon.js Bibliothek über das CDN
+async function loadBabylon() {
+    const loadScript = (src) => new Promise((resolve) => {
+      const s = document.createElement('script');
+      s.src = src;
+      s.crossOrigin = "anonymous"; // Sicherstellen, dass externe Scripte geladen werden dürfen
+      s.onload = resolve;
+      document.head.appendChild(s);
+    });
+
+    try {
+      await loadScript('https://cdn.jsdelivr.net/npm/babylonjs@6.49.0/babylon.min.js');
+      // Nach dem Laden die Bibliothek global verfügbar machen
+      origin.BABYLON = window.BABYLON; 
+      origin.status.babylonready = true;
+      window.babylonStatus.ready = true;
+    } catch (e) {
+      console.error("Babylon.js konnte nicht geladen werden:", e);
+    }
+}
+
+// Erstellt ein externes Canvas-Element für die 3D-Darstellung
+window.createExternalCanvas3d = function(id = "babylonCanvas", zIndex = 10) {
+    let existing = document.getElementById(id);
+    if (existing) return existing;
+
+    // Das Haupt-Canvas der microStudio-Engine suchen
+    let master = window.player.runtime.screen.canvas;
+    if (!master) {
+      console.warn("microStudio master-canvas not found.");
+      return null;
+    }
+
+    const newCanvas = document.createElement("canvas");
+    newCanvas.id = id;
+    newCanvas.currentLayer = zIndex;
+    
+    // Position und Größe an das Haupt-Canvas anpassen
+    const syncSize = () => {
+      const rect = master.getBoundingClientRect();
+      Object.assign(newCanvas.style, {
+        position: "fixed",
+        top: rect.top + "px",
+        left: rect.left + "px",
+        width: rect.width + "px",
+        height: rect.height + "px",
+        zIndex: newCanvas.currentLayer,
+        pointerEvents: "none",
+        display: "block",
+        backgroundColor: "transparent",
+        border: "none",
+        outline: "none"
+      });
+      
+      // Das Seitenverhältnis für die logische Skalierung berechnen
+      const aspect = master.width / master.height;
+        let logicalWidth, logicalHeight;
+        if (aspect >= 1) {
+          // Querformat berechnen
+          logicalHeight = 1200;
+          logicalWidth = Math.round(1200 * aspect);
+        } else {
+          // Hochformat berechnen
+          logicalWidth = 1200;
+          logicalHeight = Math.round(1200 / aspect);
+        }
+  
+         
+      
+        // Das Canvas ändert seine eigene interne Größe
+        if (newCanvas.width !== logicalWidth || newCanvas.height !== logicalHeight) {
+          // WICHTIG: Nicht direkt newCanvas.width ändern! 
+          // Wir speichern die Werte stattdessen in eigenen Variablen ab
+          newCanvas.width = logicalWidth;
+          newCanvas.height = logicalHeight;
+        }
+      
+    };
+
+    document.body.appendChild(newCanvas);
+    
+    // Größenanpassung bei Bildschirmänderungen registrieren
+    window.addEventListener("resize", syncSize);
+    
+   
+    syncSize();
+
+    return newCanvas;
+}
+
+// Initialisiert die Babylon 3D-Engine auf dem übergebenen Canvas
+window.makeBabylonEngine = function(canvas) {
+  if (!canvas || !origin.BABYLON) return null;
+  
+  
+  const engine = new origin.BABYLON.Engine(canvas, true, { 
+    alpha: true, 
+    premultipliedAlpha: false,
+    preserveDrawingBuffer: true 
+  });
+  
+  return engine;
+}
+
+
+// Hauptfunktion zum Starten des gesamten 3D-Setups
+window.setup3d = function() {
+  window.babylonStatus = { ready: false };
+  origin.status.babylonready = false;
+  origin.createExternalCanvas3d = window.createExternalCanvas3d;
+  origin.makeBabylonEngine = window.makeBabylonEngine
+  loadBabylon();
+}
+
+""")
+
+
+
+system.javascript("""
+
+// javascript
+
+// Globales Origin-Objekt auf dem Window definieren
+window.origin = {
+  BABYLON: 0,
+  
+  // Status-Variablen für die verschiedenen Engines
+  status: {
+            _3d_: 'disabled',
+            babylonready: false,
+            pixiready: false,
+            matterready: false,
+          },
+}
+
+// Funktion zum bekommen von Javascript Objekten, Variablen, Listen usw.
+window.bridgejs = function(path) {
+    // Eingabe auf Gültigkeit prüfen
+    if (!path) return null;
+
+    // Pfad in einzelne Teile zerlegen und leere Einträge herausfiltern
+    const parts = String(path).split('.').filter(Boolean);
+
+    // Suche beim globalen Window-Objekt starten
+    let current = window;
+
+    // Den Pfad Schritt für Schritt durchlaufen
+    for (const part of parts) {
+        // Das führende Window-Element überspringen da es der Startpunkt ist
+        if (part === 'window') continue;
+
+        // Abbrechen falls der aktuelle Pfad ins Leere läuft
+        if (current == null) return null;
+
+        // Zur nächsten Ebene des Objekts wechseln
+        current = current[part];
+    }
+
+    // Gefundenen Wert oder alternativ null zurückgeben
+    return current ?? null;
+};
+
+// Die Bridge-Funktion global verfügbar machen
+global.bridgejs = window.bridgejs;
+
+// Funktion zur Ermittlung der aktuellen Bildschirm-Dimensionen
+origin.scale = function() {
+  const currentW = document.documentElement.clientWidth;
+  const currentH = document.documentElement.clientHeight; 
+  return [currentW,currentH,window.devicePixelRatio];
+}
+
+// Hilfsfunktion zur Typenbestimmung von Variablen
+window.typeof = function(thing){
+  return typeof thing
+}
+global.typeof = window.typeof
+
+""")
+
+
+
+system.javascript("""
+
+// javascript
+
+window.setupPhysics = function() {
+  async function loadMatter() {
+      // Hilfsfunktion zum Laden externer Skripte über Promises
+      const loadScript = (src) => new Promise((resolve, reject) => {
+        const s = document.createElement('script');
+        s.src = src;
+        s.crossOrigin = "anonymous";
+        s.onload = resolve;
+        s.onerror = reject;
+        document.head.appendChild(s);
+      });
+
+      try {
+        // poly-decomp laden (Zwingend nötig für konkave Hitboxen & Löcher)
+        await loadScript('https://cdn.jsdelivr.net/npm/poly-decomp@0.3.0/build/decomp.js');
+        window.decomp = window.decomp || decomp;
+
+        // Matter.js Bibliothek laden
+        await loadScript('https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js');
+        if (!window.Matter) throw new Error("Matter.js konnte nicht geladen werden.");
+        origin.Matter = window.Matter;
+
+        // Matter das Dekompositions-Plugin für komplexe Formen zuweisen
+        origin.Matter.Common.setDecomp(window.decomp);
+
+        console.log("Matter.js und Poly-Decomp erfolgreich geladen.");
+        origin.status.matterready = (true)
+      } catch (e) {
+        console.error("Kritisches Physik-Setup fehlgeschlagen:", e);
+      }
+  }
+
+  loadMatter();
+
+
+  // Funktion zur automatischen Generierung von Hitboxen aus Texturen
+  origin.createBodyFromTexture = function(pixiTexture, targetWidth = 100, targetHeight = 100, options = {}) {
+    const Matter = origin.Matter;
+    if (!Matter) return null;
+  
+    // Basis-Ressource der PIXI-Textur extrahieren
+    const baseTexture = pixiTexture.baseTexture;
+    if (!baseTexture || !baseTexture.resource) return null;
+    const source = baseTexture.resource.source;
+  
+    // Frame-Dimensionen der Textur bestimmen
+    const frameX = pixiTexture.frame.x;
+    const frameY = pixiTexture.frame.y;
+    const frameWidth = pixiTexture.frame.width;
+    const frameHeight = pixiTexture.frame.height;
+  
+    // Temporäres Canvas zur Pixel-Analyse erstellen
+    const tempCanvas = origin.tempcanvas();
+    tempCanvas.width = frameWidth;
+    tempCanvas.height = frameHeight;
+    const ctx = tempCanvas.getContext("2d");
+    
+    // Textur-Ausschnitt auf das Canvas zeichnen
+    ctx.drawImage(
+      source,
+      frameX, frameY, frameWidth, frameHeight,
+      0, 0, frameWidth, frameHeight
+    );
+    
+    // Pixel-Farbdaten des gezeichneten Ausschnitts auslesen
+    const pixels = ctx.getImageData(0, 0, frameWidth, frameHeight).data;
+  
+    // Hilfsfunktion zur Prüfung ob ein Pixel solide ist anhand des Alpha-Werts
+    const isPixelSolid = (x, y) => {
+      if (x < 0 || x >= frameWidth || y < 0 || y >= frameHeight) return false;
+      return pixels[(y * frameWidth + x) * 4 + 3] > 30; 
+    };
+  
+    // Skalierungsfaktoren für die Zielgröße berechnen
+    const scaleX = targetWidth / frameWidth;
+    const scaleY = targetHeight / frameHeight;
+    
+    // Schritt 1: Horizontale Segmente (Spanne) pro Zeile sammeln
+    const rawRows = [];
+    for (let y = 0; y < frameHeight; y++) {
+      const rowSegments = [];
+      let startX = null;
+      
+      for (let x = 0; x <= frameWidth; x++) {
+        let solid = (x < frameWidth) ? isPixelSolid(x, y) : false;
+        if (solid) {
+          if (startX === null) startX = x;
+        } else {
+          if (startX !== null) {
+            rowSegments.push({ startX: startX, endX: x, y: y, merged: false });
+            startX = null;
+          }
+        }
+      }
+      rawRows.push(rowSegments);
+    }
+  
+    // Schritt 2: Vertikales Kombinieren (Zeile für Zeile nach unten verschmelzen)
+    const finalRects = [];
+    for (let y = 0; y < frameHeight; y++) {
+      for (let i = 0; i < rawRows[y].length; i++) {
+        const seg = rawRows[y][i];
+        if (seg.merged) continue;
+  
+        let currentH = 1;
+        seg.merged = true;
+  
+        // Schaue in die darauffolgenden Zeilen, ob dort ein exakt deckungsgleiches Segment liegt
+        for (let nextY = y + 1; nextY < frameHeight; nextY++) {
+          let foundMatch = false;
+          for (let j = 0; j < rawRows[nextY].length; j++) {
+            const nextSeg = rawRows[nextY][j];
+            // Wenn der Streifen exakt die gleiche X-Start- und X-Endposition hat
+            if (!nextSeg.merged && nextSeg.startX === seg.startX && nextSeg.endX === seg.endX) {
+              nextSeg.merged = true;
+              currentH++;
+              foundMatch = true;
+              break;
+            }
+          }
+          // Sobald eine Zeile das Segment unterbricht, stoppen wir das vertikale Wachstum
+          if (!foundMatch) break;
+        }
+  
+        // Speicher das optimierte, größere Rechteck ab
+        finalRects.push({
+          startX: seg.startX,
+          endX: seg.endX,
+          startY: seg.y,
+          height: currentH
+        });
+      }
+    }
+  
+    // Schritt 3: Matter.js Körper aus den zusammengefassten Blöcken bauen
+    const mainBody = Matter.Body.create(Object.assign({
+      position: { x: 0, y: 0 }
+    }, options));
+  
+    // Einzelne Teil-Körper für die zusammengesetzten Rechtecke erzeugen
+    const parts = [];
+    for (let i = 0; i < finalRects.length; i++) {
+      const r = finalRects[i];
+      const pixelWidth = r.endX - r.startX;
+      
+      const w = pixelWidth * scaleX;
+      const h = r.height * scaleY;
+      
+      // Position relativ zum echten mathematischen Zentrum berechnen
+      const posX = ((r.startX + pixelWidth / 2) - frameWidth / 2) * scaleX;
+      const posY = ((r.startY + r.height / 2) - frameHeight / 2) * scaleY;
+  
+      parts.push(Matter.Bodies.rectangle(posX, posY, w, h, options));
+    }
+  
+    // Fallback-Körper erzeugen falls keine soliden Pixel gefunden wurden
+    if (parts.length === 0) {
+      return Matter.Bodies.rectangle(0, 0, targetWidth, targetHeight, options);
+    }
+  
+    // Starre Kopplung an den unverschiebbaren Master-Anker vornehmen
+    Matter.Body.setParts(mainBody, [mainBody].concat(parts));
+    
+    // Positionen und vorherige Positionen des Hauptkörpers initialisieren
+    mainBody.position.x = 0;
+    mainBody.position.y = 0;
+    mainBody.positionPrev.x = 0;
+    mainBody.positionPrev.y = 0;
+  
+    return mainBody;
+  };
+}
+
+""")
+
+
+
+// file: main.ms
+function()
+init = function()
+  
+  audio.playMusic("chase", 1, 1 )
+  
+  // Hummingbird starten
+  hb = new hummingbird
+  hb.init()
+  hb.waitready()
+  
+  // UI starten
+  uiinit()
+  
+  // Screen erstellen für die Welt zum Anzeigen
+  display = new hb.canvas.screen2d(3, "player.display")
+  
+  rooms = initRooms("rooms", 4)
+  
+  // Welt erstellen
+  world = new hb.world("topdown")
+  
+  // Räume laden
+  rooms = initRooms("rooms", 4)
+  // 13x13 Räume im Grid generieren und platzieren
+  currentmap = generatemap(rooms, 13, 13) 
+  for x = 0 to 13 - 1
+    for y = 0 to 13 - 1
+      room = currentmap[x][y]
+      world.add(room)
+      for parts in room.con
+        parts.position.set(0 + (512 * x), 0 - (320 * y))
+      end
+    end
+  end
+  
+  // Map-Reibung im Physik-System auf 0 setzen
+  origin = bridgejs("origin")
+  origin.Matter.Body.set(map.body, "friction", 0)
+  for p in map.body.parts
+    origin.Matter.Body.set(p, "friction", 0)
+  end
+  
+  // Spieler-Texturen für alle Richtungen definieren
+  playertex = object
+    idle = object
+      front = hb.asset("player/idle/front", "ani", 0, 1)
+      back  = hb.asset("player/idle/back", "ani", 0, 1)
+      right = hb.asset("player/idle/right", "ani", 0, 1)
+      left  = hb.asset("player/idle/left", "ani", 0, 1)
+    end
+    walking = object
+      front = hb.asset("player/walking/front", "ani", 0, 1)
+      back  = hb.asset("player/walking/back", "ani", 0, 1)
+      right = hb.asset("player/walking/right", "ani", 0, 1)
+      left  = hb.asset("player/walking/left", "ani", 0, 1)
+    end
+  end
+  
+  // Spieler-Objekt erstellen und konfigurieren
+  player = new hb.obj("player", playertex.idle.front)
+  player.scale(2)
+  player.prio = 30
+  player.ghost(0)
+  player.static(1)
+  player.lp = 100
+  lplock = 600  // Umverwundbar beim start für 10 Sekunden
+  player.di = "front"
+  pspeed = 1
+  world.add(player)
+  
+  
+  
+  // Hitbox-Objekt für den Angriffsschwung vom Spieler vorbereiten
+  schwunghtb = new hb.obj("schwunghtb", hb.asset("player/schwung_hitbox", "ani", 0, 1))
+
+  
+  // Spieler-Hitbox erstellen und zuweisen
+  playerOptions = object
+    fixedRotation = 1
+    friction = 0
+  end
+  playerBody = createPureMatterRect(20, 10, playerOptions)
+  player.hitbox.set(playerBody)
+  player.ghost(0)
+  player.static(0)
+  player.position.set((13-1)*512/2, (13-1)*-320/2+100)
+  
+  // Player in eigene NoClip-Gruppe setzen gegen Gegner-Kollision
+  noClipGroup = -1
+  player.body.collisionFilter.group = -1
+  for p in player.body.parts
+    p.collisionFilter.group = -1
+  end
+  
+  // Angriffs-Effekt (Schwung) vorbereiten und verknüpfen
+  schwung = new hb.obj("schwung", hb.asset("player/schwung", "ani", 0, 1),["schwung_player"])
+  schwung.prio = 60
+  schwung.animation.set(hb.asset("player/schwung", "ani", 0, 1), 180 / 60)
+  schwung.hitbox.set(schwunghtb.body)
+  schwung.scale(2.25)
+  schwung.ghost(1)
+  
+  // Gegner initialisieren und erste Gegner spawnen
+  initenemy()
+  for i = 0 to 4
+    enemyspawn((13-1)*512/2, (13-1)*-320/2-100)
+    numberofenemy += 1
+  end
+  
+  every 4 second do
+    if global.gameStarted == true then
+      
+      // Aktuelle Anzahl lebender Gegner berechnen
+      local lebendeEnemys = numberofenemy - global.kills
+      
+      if lebendeEnemys < 12 and (system.cpu_load < 50 or lebendeEnemys < 5) then
+        for i = 0 to random.nextInt(3)
+          // Gegner nicht exakt auf dem Spieler spawnen, sondern leicht versetzt
+          local randomX = player.x + (random.next() - 0.5) * 100
+          local randomY = player.y + (random.next() - 0.5) * 100
+          
+          // Gegner spawnen
+          enemyspawn(randomX, randomY)
+          numberofenemy += 1
+          lplock = 60
+        end
+      end
+    end
+  end
+  every 7 second do
+    if not (player.lp >= 100) then
+      player.lp += 10
+    end
+  end
+end
+
+update = function()
+  // Steuerung und Bewegungsauswertung
+  vx = 0
+  vy = 0
+  if keyboard.DOWN then 
+    vy = 1
+    player.di = "front"
+  end
+  if keyboard.UP then
+    vy = -1
+    player.di = "back"
+  end
+  if keyboard.LEFT then
+    vx = -1
+    player.di = "left"
+  end
+  if keyboard.RIGHT then
+    vx = 1
+    player.di = "right"
+  end
+  
+  // Diagonal-Geschwindigkeit normalisieren
+  if vx != 0 and vy != 0 then
+    vx = vx * 0.7071
+    vy = vy * 0.7071
+  end
+  
+  // Animationstyp und Geschwindigkeit anhand der Bewegung setzen
+  if vx == 0 and vy == 0 then
+    ani = "idle"
+    pspeed = 1
+    anispeed = 1.2
+  else
+    ani = "walking"
+    pspeed = 2
+    anispeed = 3
+  end
+  velocity_x = vx * pspeed
+  velocity_y = vy * pspeed
+  
+  // Bewegung des Spielers anwenden
+  origin = bridgejs("origin")
+  moveVelocity = object end
+  moveVelocity.x = velocity_x
+  moveVelocity.y = velocity_y
+  origin.Matter.Body.setVelocity(player.body, moveVelocity)
+  
+  // Spieler-Angriff ausführen
+  angriff(mouse.left or keyboard.SPACE, player, schwung,1)
+  
+  // Spieler-Textur aktualisieren falls gewechselt
+  currentplayertex = playertex[ani][player.di]
+  if currentplayertex and currentplayertex != lastTex then
+    player.animation.set(currentplayertex, anispeed / 60)
+    lastTex = currentplayertex
+  end
+  player.animation.play()
+  
+  // Unverwundbarkeits-Timer herabsenken und Treffer prüfen
+  lplock -= 1
+  if lplock < 1 then
+    for things in player.collisions()
+      if things.tags.contains("schwung_enemy") then
+        player.lp -= 10
+        lplock = 60
+        player.sprite.tint = 0xFF0000
+        after 60 do
+          player.sprite.tint = 0xFFFFFF
+        end
+        
+      end
+    end
+  end
+  
+  // Bei Tod des Spielers das Spiel neu starten
+  if player.lp < 0 then
+    do
+      
+    end
+    sleep 1000
+    init()
+  end
+  
+  player.animation.play()
+  if global.gameStarted then
+    world.play()
+  end
+  
+  uiupdate()
+end
+
+draw = function()
+  displayui.render(uiStage)
+  screen.fillRect(0, 0, screen.width, screen.height, "rgb(0,0,0)")
+  
+  // Kamera auf den Spieler zentrieren
+  world.cam.x = player.x
+  world.cam.y = player.y
+  world.render(display, 0)
+end
+end()
+
+
+
+// file: map.ms
+function()
+initRooms = function(folder, number)
+  local rooms = object end
+  rooms["edge"] = new hb.area()
+  local edge = new hb.obj("edge", hb.asset(folder + "/edge", "map", 0, 1))
+  edge.static(1)
+  edge.scale(2)
+  rooms["edge"].add(edge)
+  for num = 1 to number
+    local roomKey = "r"+num
+    rooms[roomKey] = new hb.area()
+    
+    // Die einzelnen Map-Ebenen erstellen
+    // Nutzt nun 'folder' (z.B. "Fulda") und die Raumnummer für den Pfad
+    local roomBase  = new hb.obj("room_base",  hb.asset(folder + "/base", "map", 0, 1))
+    local roomFloor = new hb.obj("room_floor", hb.asset(folder + "/" + roomKey + "/floor", "map", 0, 1))
+    local roomPart1 = new hb.obj("room_top1",  hb.asset(folder + "/" + roomKey + "/part1", "map", 0, 1))
+    local roomPart2 = new hb.obj("room_top2",  hb.asset(folder + "/" + roomKey + "/part2", "map", 0, 1))
+    local roomPart3 = new hb.obj("room_top2",  hb.asset(folder + "/" + roomKey + "/part3", "map", 0, 1))
+    local hitbox    = new hb.obj("hitbox",     hb.asset(folder + "/" + roomKey + "/hitbox", "map", 0, 1),["hitbox"])
+  
+    // Rendering-Reihenfolge (Prio/Z-Index) festlegen
+    hitbox.prio    = 0
+    roomBase.prio  = 1
+    roomFloor.prio = 2
+    roomPart1.prio = 3
+    roomPart2.prio = 50
+    roomPart3.prio = 51
+    
+    // Alle Objekte in die Area des aktuellen Raums pushen
+    rooms[roomKey].add(roomBase)
+    rooms[roomKey].add(roomFloor)
+    rooms[roomKey].add(roomPart1)
+    rooms[roomKey].add(roomPart2)
+    rooms[roomKey].add(roomPart3)
+    rooms[roomKey].add(hitbox)
+  
+    // Automatische Konfiguration für alle Objekte in dieser Area
+    for obj in rooms[roomKey].con
+      obj.scale(2)
+      
+      // Nur die Hitbox erhält physikalische Kollisionen
+      if obj.name != "hitbox" then
+        obj.ghost(1)
+      end
+      
+      // Objekte als statisch definieren
+      obj.static(1)
+      
+      // Reibung im Physik-System komplett ausschalten
+      local origin = bridgejs("origin")
+      origin.Matter.Body.set(obj.body, "friction", 0)
+      
+      // Reibung für alle Einzelteile des Körpers ausschalten
+      for p in obj.body.parts
+        origin.Matter.Body.set(p, "friction", 0)
+      end
+    end
+  end
+  
+  return rooms
+end
+
+// Funktion zur zufälligen Generierung der Spielkarte
+generatemap = function(rooms, roomnumberx, roomnumbery, seed)
+  // Seed für den Zufallsgenerator festlegen falls keiner übergeben wurde
+  if seed == 0 then seed = random.nextSeed() end
+  random.seed(seed)
+  
+  local map = object end
+  local availableRooms = object end
+  local roomCount = 0
+  
+  // Verfügbare Räume in einer Liste sammeln
+  for roomKey in rooms
+    if roomKey != "edge" then
+      availableRooms[roomCount] = roomKey
+      roomCount = roomCount + 1
+    end
+  end
+  
+  // Grid-Zellen in X-Richtung durchlaufen
+  for x = 0 to roomnumberx - 1
+    map[x] = object end
+    
+    // Grid-Zellen in Y-Richtung durchlaufen
+    for y = 0 to roomnumbery - 1
+      local currentRoom = null
+      
+      // Prüfen, ob wir uns an einem der Ränder (oben, unten, links, rechts) befinden
+      if x == 0 or x == roomnumberx - 1 or y == 0 or y == roomnumbery - 1 then
+        // Rand-Raum zuweisen
+        currentRoom = rooms["edge"].clone()
+      else
+        // Zufälligen Raum für das Innere der Map auswählen
+        local randomIndex = random.nextInt(roomCount)
+        local selectedRoomKey = availableRooms[randomIndex]
+        currentRoom = rooms[selectedRoomKey].clone()
+      end
+      
+      // Den Raum im Map-Grid platzieren
+      map[x][y] = currentRoom
+    end
+  end
+  
+  return map
+end
+end()
+
+
+
+// file: ui.ms
+function()
+// Initialisierung der UI (uiinit)
+uiinit = function()
+  if not global.hbconstant then
+    local temp_hb = new hummingbird()
+  end
+  
+  displayui = new global.hbconstant.canvas.screen2d(10, "uiCanvas")
+  local pixi = displayui.PIXI
+  gameStarted = false
+  
+  uiStage = new pixi.Container()
+  
+  // Start-Button Setup
+  buttonContainer = new pixi.Container()
+  btnWidth = 200
+  btnHeight = 60
+  
+  buttonBackground = new pixi.Graphics()
+  buttonBackground.beginFill(0x4CAF50) 
+  buttonBackground.drawRoundedRect(0, 0, btnWidth, btnHeight, 12)
+  buttonBackground.endFill()
+  buttonContainer.pivot.set(btnWidth / 2, btnHeight / 2)
+  
+  local btnStyle = object end
+  btnStyle.fontFamily = "Arial"
+  btnStyle.fontSize = 26
+  btnStyle.fill = "#FFFFFF"
+  btnStyle.fontWeight = "bold"
+  
+  buttonText = new pixi.Text("START", btnStyle)
+  buttonText.position.set(btnWidth / 2, btnHeight / 2)
+  buttonText.anchor.set(0.5)
+  
+  buttonContainer.addChild(buttonBackground)
+  buttonContainer.addChild(buttonText)
+  uiStage.addChild(buttonContainer)
+  
+  // Info-Zeilen unterm Start-Button erstellen
+  infoContainer = new pixi.Container()
+  
+  local infoStyle = object end
+  infoStyle.fontFamily = "Arial"
+  infoStyle.fontSize = 20
+  infoStyle.fill = "#FFFFFF" 
+  infoStyle.fontWeight = "bold"
+  
+  // Zeilentexte definieren
+  infoZeile1 = new pixi.Text("Bewegung: WASD / Pfeiltasten", infoStyle)
+  infoZeile2 = new pixi.Text("Angriff: Mit linker Maustaste oder Leertaste", infoStyle)
+  infoZeile3 = new pixi.Text("Hinweis: Es wird in die Richtung des Mauszeigers geschlagen", infoStyle)
+  infoZeile4 = new pixi.Text("Ziel: Überlebe so lange wie möglich!", infoStyle) 
+  
+  // Text-Anker mittig setzen
+  infoZeile1.anchor.set(0.5)
+  infoZeile2.anchor.set(0.5)
+  infoZeile3.anchor.set(0.5)
+  infoZeile4.anchor.set(0.5)
+  
+  // Zeilen untereinander positionieren
+  infoZeile1.position.set(0, 0)
+  infoZeile2.position.set(0, 25)
+  infoZeile3.position.set(0, 50)
+  infoZeile4.position.set(0, 75)
+  
+  infoContainer.addChild(infoZeile1)
+  infoContainer.addChild(infoZeile2)
+  infoContainer.addChild(infoZeile3)
+  infoContainer.addChild(infoZeile4)
+  
+  // Den gesamten Info-Block unter den Button setzen
+  infoContainer.position.set(0, (btnHeight / 2) + 40)
+  
+  uiStage.addChild(infoContainer)
+  
+  // Timer Setup
+  timerContainer = new pixi.Container()
+  timerContainer.visible = false
+  
+  local timerStyle = object end
+  timerStyle.fontFamily = "Arial"
+  timerStyle.fontSize = 32
+  timerStyle.fill = "#FFFFFF"
+  timerStyle.fontWeight = "bold"
+  timerStyle.dropShadow = true
+  timerStyle.dropShadowColor = "#000000"
+  timerStyle.dropShadowBlur = 4
+  timerStyle.dropShadowDistance = 2
+  
+  timerText = new pixi.Text("00:00", timerStyle)
+  timerText.anchor.set(0.5)
+  timerText.position.set(0, 0)
+  
+  timerContainer.addChild(timerText)
+  uiStage.addChild(timerContainer)
+  
+  // Variablen für die Zeitberechnung initialisieren
+  global.gameStartTime = 0
+  global.elapsedSeconds = 0
+  
+  // Player HUD mit starrem Herz erstellen
+  hudContainer = new pixi.Container()
+  hudContainer.visible = false 
+  hudContainer.position.set(0, 0)
+  
+  // Herz-Grafik zeichnen
+  heartGraphics = new pixi.Graphics()
+  heartGraphics.beginFill(0xDD2E44) 
+  
+  heartGraphics.moveTo(0, 20)
+  heartGraphics.bezierCurveTo(-25, -15, -50, 5, -50, 25)
+  heartGraphics.bezierCurveTo(-50, 45, -30, 65, 0, 90)
+  heartGraphics.bezierCurveTo(30, 65, 50, 45, 50, 25)
+  heartGraphics.bezierCurveTo(50, 5, 25, -15, 0, 20)
+  heartGraphics.endFill()
+  
+  heartGraphics.pivot.set(0, 40)
+  
+  // Dunklen Rahmen um das Herz zeichnen
+  heartGraphics.lineStyle(4, 0x7A1422, 1)
+  heartGraphics.moveTo(0, 20)
+  heartGraphics.bezierCurveTo(-25, -15, -50, 5, -50, 25)
+  heartGraphics.bezierCurveTo(-50, 45, -30, 65, 0, 90)
+  heartGraphics.bezierCurveTo(30, 65, 50, 45, 50, 25)
+  heartGraphics.bezierCurveTo(50, 5, 25, -15, 0, 20)
+  
+  local lpStyle = object end
+  lpStyle.fontFamily = "Arial"
+  lpStyle.fontSize = 24
+  lpStyle.fill = "#FFFFFF"
+  lpStyle.fontWeight = "bold"
+  
+  lpStyle.dropShadow = true
+  lpStyle.dropShadowColor = "#000000"
+  lpStyle.dropShadowBlur = 3
+  lpStyle.dropShadowDistance = 2
+  
+  // Sicherstellen dass das globale Spieler-Objekt existiert
+  if not global.player then
+    global.player = object lp = 100 max_lp = 100 end
+  end
+  
+  lpText = new pixi.Text(global.player.lp, lpStyle)
+  lpText.anchor.set(0.5)
+  lpText.position.set(0, 0) 
+  
+  hudContainer.addChild(heartGraphics)
+  hudContainer.addChild(lpText)
+  
+  uiStage.addChild(hudContainer)
+end
+
+// Logik-Update der UI (uiupdate)
+uiupdate = function()
+  if not global.gameStarted then
+    // Klick-Abfrage für den Start-Button im Hauptmenü
+    if mouse.left then
+      local leftBorder   = -btnWidth / 2
+      local rightBorder  =  btnWidth / 2
+      local topBorder    =  btnHeight / 2
+      local bottomBorder = -btnHeight / 2
+      
+      // Prüfen ob der Klick innerhalb der Button-Grenzen liegt
+      if mouse.x >= leftBorder and mouse.x <= rightBorder and mouse.y >= bottomBorder and mouse.y <= topBorder then
+        print("Spiel gestartet!")
+        global.gameStarted = true
+        global.gameStartTime = system.time() 
+        
+        // Menü-Elemente ausblenden und Gameplay-HUD einblenden
+        buttonContainer.visible = false 
+        infoContainer.visible = false   
+        hudContainer.visible = true     
+        timerContainer.visible = true   
+      end
+    end
+    
+  else
+    // Fallbacks für die Dimensionen falls der Renderer noch lädt
+    local renderWidth = 800
+    local renderHeight = 800
+    
+    if displayui and displayui.renderer then
+      renderWidth = displayui.renderer.width
+      renderHeight = displayui.renderer.height
+    end
+
+    // Abstände vom Bildschirmrand definieren
+    local herzAbstandX = 200
+    local herzAbstandY = 200
+    
+    // Position des HUDs dynamisch an die Bildschirmgröße anpassen
+    local dynamicX = renderWidth - herzAbstandX
+    local dynamicY = renderHeight - herzAbstandY
+    
+    hudContainer.position.set(-dynamicX / 2, dynamicY / 2)
+
+    // Timer-Logik und Positionierung ausführen
+    global.elapsedSeconds = floor(system.time() - global.gameStartTime)
+    
+    local minutes = floor((global.elapsedSeconds / 1000)/60)
+    local seconds = floor(global.elapsedSeconds / 1000)-minutes*60
+    
+    // Führende Nullen für die Zeitanzeige zusammensetzen
+    local strMin = "" + minutes
+    if minutes < 10 then strMin = "0" + minutes end
+    
+    local strSec = "" + seconds
+    if seconds < 10 then strSec = "0" + seconds end
+    
+    timerText.text = strMin + ":" + strSec
+    
+    // Den Timer zentriert am oberen Bildschirmrand platzieren
+    timerContainer.position.set(0, (-renderHeight / 2) + 40)
+
+    // Aktuelle Lebenspunkte des Spielers formatiert anzeigen
+    if global.player.lp < 0 then global.player.lp = 0 end
+    lpText.text = floor(global.player.lp)
+  end
+end
+end()
+
+
+</script></html>
